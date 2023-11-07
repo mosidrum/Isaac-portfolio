@@ -1,9 +1,10 @@
 import "./App.css";
+import { Header } from "./components/Header";
 
-function App() {
+const App = () => {
   return (
     <>
-      <h1>Hello There!</h1>
+      <Header />
     </>
   );
 }
