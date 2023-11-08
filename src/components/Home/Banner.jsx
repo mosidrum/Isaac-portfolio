@@ -33,7 +33,7 @@ const Banner = () => {
           <div className="flex mt-8 gap-3">
             <LinkButton href="https://wa.me/+2347037699314" text="Chat on WhatsApp" bgColor="bg-green-500" />
             <LinkButton
-              href="https://drive.google.com/file/d/1O3lPUxzWo8HliCPFWinr46-RWlrxBH8Y/view?usp=sharing"
+              href="https://drive.google.com/file/d/1C8dQ-TYxwP8O5sdUzdnhpS8mL64xfmeR/view?usp=sharing"
               text="Download Resume"
               bgColor="bg-black"
             />
