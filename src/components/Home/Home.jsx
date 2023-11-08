@@ -21,7 +21,7 @@ const Home = () => {
     variants={fadeIn("up", 0.1)}
     initial="hidden"
     whileInView={"show"}
-    viewport={{ once: false, amount: 0.1 }}
+    viewport={{ once: true, amount: 0.1 }}
     >
       <div className="hero h-screen flex flex-col md:flex-row items-center justify-center" id='home'>
         <div className='bg-white w-20 rounded py-1 px-2 mx-3 absolute left-0 hidden md:flex flex-wrap'>

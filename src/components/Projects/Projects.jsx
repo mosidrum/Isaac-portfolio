@@ -20,7 +20,7 @@ const Projects = () => {
           variants={fadeIn("up", 0.1)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{once:false, amount:0.1}}
+          viewport={{once:true, amount:0.1}}
           >
             <img src={project.image} alt="project-image" />
             <div className='md:w-10/12 text-center md:text-left px-2'>

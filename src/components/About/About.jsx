@@ -17,7 +17,7 @@ const About = () => {
         variants={fadeIn("right", 0.1)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{once:false, amount:0.1}}
+        viewport={{once:true, amount:0.1}}
         >
 					<h4 className='text-2xl font-bold mb-8'>Get to know me!</h4>
 					<div className='md:w-10/12 text-lg text-[#666] mb-8'>
@@ -49,7 +49,7 @@ const About = () => {
         variants={fadeIn("left", 0.1)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{once:false, amount:0.1}}
+        viewport={{once:true, amount:0.1}}
         >
         <h4 className='text-2xl font-bold mb-8'>My Skills</h4>
           <div className='flex flex-wrap gap-3 md:w-10/12'>
