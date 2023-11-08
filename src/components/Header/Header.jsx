@@ -10,7 +10,7 @@ const Header = () => {
       <div className="md:flex items-center justify-between bg-white py-4 md:py-0 md:px-14 px-7 fixed top-0 left-0 right-0 shadow-sm">
           <div className="font-bold text-2x1 tracking-wide cursor-pointer flex items-center gap-1">
               <img src={isaac} alt="profile-pics" className="md:w-12 md:h-12 w-10 h-10"/>
-              <span className="text-primary hover:text-gray-400 mb:ml-3 ml-2 uppercase text-lg">Ayodele Isaac</span>
+              <span className="text-primary hover:text-gray-400 mb:ml-3 ml-2 text-lg">Ayodele Isaac</span>
           </div>
         <div onClick={() => setMenuOpen(!menuOpen)} className="w-7 h-7 text-primary cursor-pointer absolute right-8 top-6 md:hidden">
           {menuOpen ? <XMarkIcon /> : <Bars3Icon />}
@@ -23,7 +23,7 @@ const Header = () => {
               smooth={true}
               spy={true}
               offset={-100}
-              className="text-light hover:text-gray-400 duration-500 uppercase">{link.name}</Link>
+              className="text-light hover:text-gray-400 duration-500">{link.name}</Link>
             </li>)}
           </ul>
       </div>
