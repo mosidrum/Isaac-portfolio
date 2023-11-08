@@ -1,38 +1,47 @@
 export const projects = [
 	{
 		id: 1,
-		name: 'Dopefolio',
+		name: 'eUniversity Africa',
 		description:
-			'Dopefolio is a successful Open-Source project that I created which have been featured on some of the biggest tech sites like CSS-Tricks, Hostinger, etc & used by thousands of developers globally',
-		image: '/src/assets/dopefolio.jpeg',
-    live: 'https://google.com',
-    code: 'https://github.com'
+			' eUniversity is an online university that has a global point-of-reference in the use of digital learning to transform society in wealth creation and also a trail blazer and a world inspiration in offering learners a low cost, high quality learning pathways towards the world of employment and entrepreneurial leadership in their chosen field equipped with robust multi-skills to tackle an ever-changing multi-tasking world and inculcate in them the ability to think, learn and innovate freely and creatively',
+		image: 'https://i.ibb.co/4P16hjb/eua-project.png',
+    live: 'https://eua-client.vercel.app/',
+    code: 'https://github.com/greatertomi/eua-client'
 	},
 	{
 		id: 2,
-		name: 'Wilsonport',
+		name: 'Portfolio',
 		description:
-			'Wilsonport is a multiservice logistics and transport company and I created their website from scratch using the frontend tools I know.',
-		image: '/src/assets/wilsonport.jpeg',
-    live: 'https://google.com',
-    code: 'https://github.com'
+			'My portfolio website is a testament to my journey as a web developer. It showcases my passion for creating stunning, user-friendly interfaces and interactive web applications. With a keen eye for design and a commitment to clean, efficient code, I aim to deliver seamless digital experiences. Explore my work to see how I transform ideas into functional and aesthetically pleasing websites. Welcome to a world of creativity, innovation, and web development expertise, all encapsulated in my portfolio.',
+		image: 'https://i.ibb.co/Yb1sY78/portfolio.png',
+    live: 'https://isaac-portfolio-trbe.vercel.app/',
+    code: 'https://github.com/mosidrum/Isaac-portfolio'
 	},
 	{
 		id: 3,
-		name: 'Boreal Coffee Clone',
+		name: 'Countries',
 		description:
-			"I re-created the frontend of Boreal Coffee's official web app because I got attracted to their beautiful UI. It was a great experience for me to build the entire frontend.",
-		image: '/src/assets/boreal-coffee-clone.jpeg',
-    live: 'https://google.com',
-    code: 'https://github.com'
+			"This is a comprehensive statistical information platform covering all countries and continents worldwide. It was meticulously constructed using a REST API, meticulously extracting relevant data from the responses. This project served as the culmination of my skills and knowledge acquired during the Microcerse online bootcamp, showcasing my ability to create a valuable and data-driven web resource.",
+		image: 'https://i.ibb.co/4MCLJ2x/global-Village.jpg',
+    live: 'https://strong-clafoutis-586e91.netlify.app',
+    code: 'https://github.com/mosidrum/react_capstone'
 	},
 	{
 		id: 4,
-		name: 'Crown Template',
+		name: 'Quiz Web App',
 		description:
-			'Crown is a web template that I created targeting the restaurant and food industry which anyone can use to present their business online.',
-		image: '/src/assets/crown-template.jpeg',
-    live: 'https://google.com',
-    code: 'https://github.com'
+			'This web application sources its questions from the TRIVIA REST API, ensuring the highest quality and diversity of quiz content. It offers a user-friendly, multiple-choice question format, accompanied by a sophisticated scoring system that automatically evaluates users responses. As individuals engage with the questions, the platform provides real-time feedback and a comprehensive score indicator, enhancing their overall quiz experience.',
+		image: 'https://i.ibb.co/0rtXYGX/quiz.png',
+    live: 'https://ques-web-app.vercel.app/',
+    code: 'https://github.com/mosidrum/ques_web_app'
+	},
+	{
+		id: 5,
+		name: 'Recipe Web App',
+		description:
+			'This project is a culinary canvas where flavors come to life. Its a delightful culinary journey through a tapestry of recipes, offering a symphony of tastes from around the world. With carefully curated dishes and step-by-step guides, its a culinary companion for both beginners and seasoned chefs. From family favorites to exotic delicacies, my recipe website invites you to search and discover prepartion guildlines for any recipe of your choice.',
+		image: 'https://i.ibb.co/kHTtGw2/recipe.png',
+    live: 'https://food-recipes-phi.vercel.app',
+    code: 'https://github.com/mosidrum/Food_Recipes'
 	},
 ];

@@ -10,4 +10,5 @@ export const skills = [
     {id: 9, title: 'Git'},
     {id: 10, title: 'Github'},
     {id: 11, title: 'Responsive Design'},
+    {id: 12, title: 'Tailwind CSS'},
 ]

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
 const LinkButton = ({ href, text, bgColor }) => (
-  <a href={href} className={`${bgColor} text-white px-5 py-3 font-semibold rounded`} target='_blank' rel='noreferrer'>
+  <a href={href} className={`${bgColor} text-white px-4 py-2 rounded`} target='_blank' rel='noreferrer'>
     {text}
   </a>
 );

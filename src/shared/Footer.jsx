@@ -18,7 +18,7 @@ const Footer = () => {
 		<div className="bg-black md:h-96 px-7">
 			<div className='max-w-7xl mx-auto py-20 flex flex-col md:flex-row justify-between'>
 				<div className='md:w-2/5 my-3'>
-					<h4 className='text-white font-bold text-2xl tracking-wide'>ISAAC AYODELE</h4>
+					<h4 className='text-white text-2xl tracking-wide'>Isaac Ayodele</h4>
 					<p className='mt-5 text-sm leading-7 text-[#eee]'>
 						In this ever-evolving digital landscape, I&apos;m your ally in the
 						pursuit of excellence. My expertise lies in front-end web
@@ -26,7 +26,7 @@ const Footer = () => {
 					</p>
 				</div>
         <div className='my-3'>
-          <h4 className='text-white font-bold text-2xl tracking-wide'>SOCIAL</h4>
+          <h4 className='text-white text-1xl tracking-wide'>Social links</h4>
           <div className='mt-5 flex gap-3'>
           {social.map((socialItem) => (
             <a href={socialItem.link} target='_blank' rel='noreferrer' className='ml-1' key={socialItem.name}>
