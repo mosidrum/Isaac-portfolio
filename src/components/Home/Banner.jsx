@@ -31,7 +31,7 @@ const Banner = () => {
             I craft immersive digital experiences that&apos;ll leave you spellbound. As a web developer, I weave code and creativity to bring your online dreams to life. Let&apos;s embark on a digital adventure together!
           </p>
           <div className="flex mt-8 gap-3">
-            <LinkButton href="https://wa.me/07037699314" text="Chat on WhatsApp" bgColor="bg-green-500" />
+            <LinkButton href="https://wa.me/+2347037699314" text="Chat on WhatsApp" bgColor="bg-green-500" />
             <LinkButton
               href="https://drive.google.com/file/d/1O3lPUxzWo8HliCPFWinr46-RWlrxBH8Y/view?usp=sharing"
               text="Download Resume"
