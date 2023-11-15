@@ -25,20 +25,14 @@ const About = () => {
               As a passionate <strong> frontend web developer</strong> with a flair for crafting captivating
               online experiences. My journey in the digital realm has been nothing
               short of exhilarating, as I continually push the boundaries of
-              what&apos;s possible in web development.
-            </p>
-            <p className='mb-5'>
-            With a deep love for coding and
+              what&apos;s possible in web development. With a deep love for coding and
               an unwavering commitment to pixel-perfect design, I
               transforming ideas into visually stunning and user-friendly
-              websites. I&apos;m your ally in the pursuit of excellence, my expertise
-              lies in front-end development, blending technical prowess with
-              artistic finesse, latest web trends, responsive and interactive
-              interfaces, ensuring that your online presence meets its goal.
+              websites.
             </p>
             <p className='mb-5'>
               When I&apos;m not immersed in the world of
-              web development, you can find me playig drums or in a musical concert dancing to musical beats in the great
+              web development, you can find me playing drum or in a musical concert dancing to musical beats in the great
               spirit. Life,
               like coding, is an adventure, and I&apos;m excited to embark on it with
               you. Let&apos;s collaborate to make your digital dreams a reality.
