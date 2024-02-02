@@ -36,7 +36,7 @@ const Projects = () => {
 							/>
 							<div className="md:w-10/12 text-center md:text-left px-2">
 								<h4 className="text-2xl font-bold mb-6">{project.name}</h4>
-								<p className="text-lg text-[#666] leading-6 mb-6">
+								<p className="text-lg text-[#666] leading-6 mb-6 text-justify">
 									{project.description}
 								</p>
 								<div className="flex gap-4">

@@ -28,7 +28,7 @@ const About = () => {
 					}}
 				>
 					<h4 className="text-2xl font-bold mb-8">Get to know me!</h4>
-					<div className="md:w-10/12 text-lg text-[#666] mb-8">
+					<div className="md:w-10/12 text-lg text-[#666] mb-8 text-justify">
 						<p className="mb-5">
 							As a passionate <strong> frontend web developer</strong> with a
 							flair for crafting captivating online experiences. My journey in
