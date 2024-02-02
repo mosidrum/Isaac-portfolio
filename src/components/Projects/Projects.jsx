@@ -3,7 +3,6 @@ import React from 'react';
 import Headings from '../../shared/Headings';
 import { projects } from '../../utils/projects';
 import { motion } from 'framer-motion';
-import { fadeIn } from '../../variants';
 
 const Projects = () => {
 	return (
