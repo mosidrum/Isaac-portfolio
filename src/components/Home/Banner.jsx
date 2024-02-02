@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+import myself2 from '../../assets/isaac.jpg';
 
 const LinkButton = ({ href, text, bgColor }) => (
   <a href={href} className={`${bgColor} text-white px-4 py-2 rounded`} target='_blank' rel='noreferrer'>
@@ -14,7 +15,7 @@ LinkButton.propTypes = {
 };
 
 const Banner = () => {
-  const backgroundImageURL = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97";
+  const backgroundImageURL = myself2;
 
   return (
     <motion.div className="px-2 py-20 w-full flex justify-center mt-44 md:mt-0">
