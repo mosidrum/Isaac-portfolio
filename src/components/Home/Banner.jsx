@@ -16,9 +16,10 @@ const LinkButton = ({ href, text, bgColor, icon }) => (
 );
 
 LinkButton.propTypes = {
-  href: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  bgColor: PropTypes.string.isRequired,
+	href: PropTypes.string.isRequired,
+	text: PropTypes.string.isRequired,
+	bgColor: PropTypes.string.isRequired,
+	icon: PropTypes.elementType.isRequired
 };
 
 const Banner = () => {
