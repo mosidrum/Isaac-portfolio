@@ -10,9 +10,5 @@ export const navLinks = [
     {
         name: 'Projects',
         link: 'projects'
-    },
-    {
-        name: 'Contact',
-        link: 'contact'
-    },
+    }
 ]
