@@ -10,7 +10,7 @@ const LinkButton = ({ href, text, bgColor, icon }) => (
 		target="_blank"
 		rel="noreferrer"
 	>
-    <div>{icon}</div>
+		<div>{icon}</div>
 		<div>{text}</div>
 	</a>
 );
@@ -19,14 +19,14 @@ LinkButton.propTypes = {
 	href: PropTypes.string.isRequired,
 	text: PropTypes.string.isRequired,
 	bgColor: PropTypes.string.isRequired,
-	icon: PropTypes.elementType.isRequired
+	icon: PropTypes.elementType.isRequired,
 };
 
 const Banner = () => {
-  const backgroundImageURL = 'https://i.ibb.co/Gd8H6bQ/Isaac.jpg';
-  const size = 30;
+	const backgroundImageURL = 'https://i.ibb.co/Gd8H6bQ/Isaac.jpg';
+	const size = 30;
 
-  return (
+	return (
 		<motion.div className="px-2 py-20 w-full flex justify-center mt-44 md:mt-0">
 			<div className="mt-8 lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg rounded-lg">
 				<div className="lg:w-1/2">
@@ -57,7 +57,7 @@ const Banner = () => {
 							icon={<FaWhatsapp size={size} />}
 						/>
 						<LinkButton
-							href="https://drive.google.com/file/d/1ZTyTw7UyRRAkc4dm4A9hfuXlCHG24xNH/view?usp=sharing"
+							href="https://drive.google.com/file/d/1hV5P520CoG_9ZSqp2c3MFHV-Uc2mV0Ss/view?usp=sharing"
 							text="Download Resume"
 							bgColor="bg-black"
 							icon={<FaDownload size={size} />}
