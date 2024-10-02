@@ -7,5 +7,8 @@ export const skills = [
     {id: 6, title: 'Tailwind'},
     {id: 7, title: 'MERN Stack'},
     {id: 8, title: 'Ruby'},
-    {id: 9, title: 'Ruby on Rails'}
+    {id: 9, title: 'Rails'},
+    {id: 10, title: 'NodeJs'},
+    {id: 11, title: 'NextJs'},
+    {id: 12, title: 'React Native'}
 ]

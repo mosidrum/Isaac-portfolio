@@ -30,20 +30,18 @@ const About = () => {
 					<h4 className="text-2xl font-bold mb-8">Get to know me!</h4>
 					<div className="md:w-10/12 text-lg text-[#666] mb-8 text-justify">
 						<p className="mb-5">
-							As a passionate <strong> frontend web developer</strong> with a
-							flair for crafting captivating online experiences. My journey in
-							the digital realm has been nothing short of exhilarating, as I
-							continually push the boundaries of what&apos;s possible in web
-							development. With a deep love for coding and an unwavering
-							commitment to pixel-perfect design, I transforming ideas into
-							visually stunning and user-friendly websites.
+							As a dedicated <strong>software engineer</strong> with a passion for building
+							innovative and high-performing applications, my journey in the tech world has
+							been both exciting and rewarding. I thrive on solving complex challenges and
+							continually pushing the limits of what’s possible in software development.
+							With a strong foundation in coding and a focus on creating scalable, efficient,
+							and user-friendly solutions, I bring ideas to life through robust software.
 						</p>
 						<p className="mb-5">
-							When I&apos;m not immersed in the world of web development, you
-							can find me playing drum or in a musical concert dancing to
-							musical beats in the great spirit. Life, like coding, is an
-							adventure, and I&apos;m excited to embark on it with you.
-							Let&apos;s collaborate to make your digital dreams a reality.
+							When I&apos;m not deep in code, you can find me playing drums or enjoying a live
+							concert, letting the rhythm fuel my creativity. Like software development, life
+							is full of rhythm and flow, and I&apos;m ready to collaborate with you to bring
+							your vision to life. Let&apos;s work together to make your digital goals a reality.
 						</p>
 					</div>
 				</motion.div>
@@ -51,11 +49,11 @@ const About = () => {
 					className="md:w-1/2 my-8"
 					initial="hidden"
 					whileInView="visible"
-					viewport={{ once: true, amount: 0.5 }}
-					transition={{ delay: 0.2, duration: 0.7 }}
+					viewport={{once: true, amount: 0.5}}
+					transition={{delay: 0.2, duration: 0.7}}
 					variants={{
-						hidden: { opacity: 0, x: 50 },
-						visible: { opacity: 1, x: 0 },
+						hidden: {opacity: 0, x: 50},
+						visible: {opacity: 1, x: 0},
 					}}
 				>
 					<h4 className="text-2xl font-bold mb-8">My Skills</h4>

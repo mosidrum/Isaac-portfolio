@@ -37,17 +37,14 @@ const Banner = () => {
 				</div>
 				<div className="py-12 px-6 lg:px-12 max-w-xl lg:max-w-5xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
 					<h2 className="text-3xl text-gray-800 font-bold">
-						Elevate Your Web Projects
+						Drive Innovation and Results
 						<span className="text-blue-300">
 							{' '}
-							with me as your Frontend Developer
+							with a Top-Tier Software Engineer
 						</span>
 					</h2>
 					<p className="mt-4 text-gray-600 text-justify">
-						I craft immersive digital experiences that&apos;ll leave you
-						spellbound. As a web developer, I weave code and creativity to bring
-						your online dreams to life. Let&apos;s embark on a digital adventure
-						together!
+						I bring a blend of creativity and technical expertise to deliver powerful, business-focused software. Let’s collaborate to build solutions that not only solve problems but propel your company forward.
 					</p>
 					<div className="flex mt-8 gap-3">
 						<LinkButton

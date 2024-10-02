@@ -28,8 +28,7 @@ const Footer = () => {
 					<h4 className="text-white text-2xl tracking-wide">Isaac Ayodele</h4>
 					<p className="mt-5 text-sm leading-7 text-[#eee]">
 						In this ever-evolving digital landscape, I&apos;m your ally in the
-						pursuit of excellence. My expertise lies in front-end web
-						development.
+						pursuit of excellence.
 					</p>
 				</div>
 				<div className="my-3">
