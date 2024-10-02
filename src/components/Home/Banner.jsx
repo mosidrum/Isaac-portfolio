@@ -57,7 +57,7 @@ const Banner = () => {
 							icon={<FaWhatsapp size={size} />}
 						/>
 						<LinkButton
-							href="https://drive.google.com/file/d/1hV5P520CoG_9ZSqp2c3MFHV-Uc2mV0Ss/view?usp=sharing"
+							href="https://drive.google.com/file/d/1RxIllvbbthoqiXWBKd_HFQgLHU5S02EN/view?usp=drive_link"
 							text="Download Resume"
 							bgColor="bg-black"
 							icon={<FaDownload size={size} />}
