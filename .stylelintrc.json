@@ -1,0 +1,24 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "color-hex-length": "short",
+    "color-named": "never",
+    "color-no-invalid-hex": true,
+    "unit-allowed-list": ["em", "rem", "%", "s", "px"],
+    "value-keyword-case": "lower",
+    "number-max-precision": 2,
+    "font-family-name-quotes": "always-where-recommended",
+    "font-weight-notation": "numeric",
+    "selector-class-pattern": "^[a-z0-9\\-]+$",
+    "media-feature-range-notation": null,
+    "selector-max-id": 0,
+    "selector-no-qualifying-type": [true, { "ignore": ["attribute"] }],
+    "block-no-empty": true,
+    "shorthand-property-no-redundant-values": true,
+    "selector-max-compound-selectors": 3,
+    "selector-max-specificity": "0,3,0",
+    "no-descending-specificity": true,
+    "no-duplicate-selectors": true,
+    "no-empty-source": null
+  }
+}
