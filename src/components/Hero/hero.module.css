@@ -1,0 +1,13 @@
+.title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ffbeba;
+    background-image: linear-gradient(to right, #10b981, #38bdf8, #0ea5e9, #fbbf24, #d946ef);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.aboutme {
+    line-height: 26px;
+    color: var(--text-color-white);
+}
