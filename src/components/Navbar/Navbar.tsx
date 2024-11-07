@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './navbar.module.css';
-import { GotoLink } from '../gotoLink';
+import { GotoLink } from '../GotoLink';
 import { navItems } from '../../utils';
 
 export const Navbar = () => (

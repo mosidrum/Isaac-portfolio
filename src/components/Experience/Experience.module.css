@@ -1,0 +1,5 @@
+.container {
+  width: 45%;
+  border: 1px solid #eee;
+  gap: 16px;
+}

@@ -1,4 +1,9 @@
-export const navItems = [
+type navItemType = {
+  name: string
+  link: string
+}
+
+export const navItems: navItemType[] = [
   {
     name: 'About me',
     link: '/about'
