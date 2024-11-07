@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import './utilities.css';
+@import url('./utilities.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,19 +9,21 @@
 
 /* Light Mode (Default) */
 :root {
-    --background-color: #000000;
+    --background-color: #000;
     --nav-bar-color: #111827;
-    --text-color: #ffffff;
-    --text-secondary: #9a9494;
+    --text-color: #fff;
+    --text-secondary: #1296d3;
+    --text-tetiary: #9a9494;
     --line-opacity: 0.2;
 }
 
 /* Dark Mode */
 .dark-theme {
-    --background-color: #000000;
+    --background-color: #000;
     --nav-bar-color: #111827;
-    --text-color: #ffffff;
-    --text-secondary: #9a9494;
+    --text-color: #fff;
+    --text-secondary: #1296d3;
+    --text-tetiary: #9a9494;
     --line-opacity: 0.2;
 }
 

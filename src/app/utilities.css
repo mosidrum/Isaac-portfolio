@@ -122,8 +122,9 @@
 /* Text color (assuming CSS variables) */
 .text-primary { color: var(--text-color); }
 .text-secondary { color: var(--text-secondary); }
-.text-white { color: #ffffff; }
-.text-black { color: #000000; }
+.text-tetiary { color: var(--text-tetiary); }
+.text-white { color: #fff; }
+.text-black { color: #000; }
 
 /* Text decoration */
 .text-underline { text-decoration: underline; }

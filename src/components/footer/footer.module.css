@@ -1,10 +1,10 @@
 .footer {
-    color: var(--text-secondary);
+    color: var(--text-tetiary);
 }
 
 .line {
     opacity: var(--line-opacity);
-    color: var(--text-secondary);
+    color: var(--text-tetiary);
 }
 
 
