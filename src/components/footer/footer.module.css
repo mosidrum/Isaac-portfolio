@@ -1,20 +1,12 @@
 .footer {
-    color: #9a9494;
+    color: var(--text-secondary);
 }
 
 .line {
-    opacity: 0.2;
-    color: #9a9494;
+    opacity: var(--line-opacity);
+    color: var(--text-secondary);
 }
 
-.content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-}
 
-.items {
-    display: flex;
-    gap: 16px;
-}
+
+
