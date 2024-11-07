@@ -1,24 +1,6 @@
 import styles from './navbar.module.css';
 import { GotoLink } from '../gotoLink';
-
-const navItems = [
-  {
-    name: 'About me',
-    link: '/about'
-  },
-  {
-    name: 'Projects',
-    link: '/projects'
-  },
-  {
-    name: 'Blog',
-    link: '/blog'
-  },
-  {
-    name: 'Uses',
-    link: '/uses'
-  }
-];
+import { navItems } from '../../utils';
 
 export const Navbar = () => (
   <div className={styles.container}>
