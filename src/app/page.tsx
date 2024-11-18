@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <div className="flex-center-between">
+      <div className="flex-center-between align-item-start mt-3">
         <Recent />
         <Experience />
       </div>

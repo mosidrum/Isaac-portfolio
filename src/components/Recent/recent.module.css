@@ -1,0 +1,8 @@
+.recent {
+  padding: 30px 20px;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: var(--background-button);
+  }
+}

@@ -21,8 +21,8 @@ export const iconItems = [
 ]
 
 export const Hero = () => (
-  <div>
-    <h2>👋 Hello I am</h2>
+  <div className="flex-column mt-5 gap-1">
+    <div className="text-2xl">👋 Hello I am</div>
     <div className={styles.title}>Isaac Ayodele</div>
     <p>A passionate software engineer and a firm believer that technology can address humanity&apos;s most pressing challenges. My expertise lies in front-end development. I enjoy developing clean, accessible and high-performant web applications.</p>
     <Link className="text-no-underline" href='/'>
@@ -30,7 +30,7 @@ export const Hero = () => (
     </Link>
     <div className="d-flex gap-2">
       {iconItems.map((item, index) => (
-        <div key={index}>{item.icon}</div>
+        <div className="text-xl mv-2 hover" key={index}>{item.icon}</div>
       ))}
     </div>
   </div>
