@@ -1,6 +1,14 @@
 export const projects = [
 	{
 		id: 1,
+		name: 'Hilink landing page',
+		description: 'Hilink is a travel website. The clean design and entire user experience established a high bar. It has a call-to-action section that encourages viewers to try the mobile app version. Includes seamless functionality across all devices, code architecture, and reusability.',
+		image: 'https://i.ibb.co/jrQBKp5/Macbook-Air-hilink-landing-page-beta-vercel-app.png',
+		live: 'https://hilink-landing-page-beta.vercel.app/',
+		code: 'https://github.com/mosidrum/hilink_landing_page',
+	},
+	{
+		id: 2,
 		name: 'eUniversity Africa',
 		description:
 			' eUniversity is an online university that has a global point-of-reference in the use of digital learning to transform society in wealth creation.',
@@ -9,7 +17,7 @@ export const projects = [
 		code: 'https://github.com/greatertomi/eua-client',
 	},
 	{
-		id: 2,
+		id: 3,
 		name: 'Portfolio',
 		description:
 			'My portfolio website is a testament to my journey as a web developer. It showcases my passion for creating stunning, user-friendly interfaces and interactive web applications.',
@@ -18,7 +26,7 @@ export const projects = [
 		code: 'https://github.com/mosidrum/Isaac-portfolio',
 	},
 	{
-		id: 3,
+		id: 4,
 		name: 'Countries',
 		description:
 			'This is a comprehensive statistical information platform covering all countries and continents worldwide. It was meticulously constructed using a REST API, meticulously extracting relevant data from the responses.',
@@ -27,7 +35,7 @@ export const projects = [
 		code: 'https://github.com/mosidrum/react_capstone',
 	},
 	{
-		id: 4,
+		id: 5,
 		name: 'Quiz Web App',
 		description:
 			'This web application sources its questions from the TRIVIA REST API, ensuring the highest quality and diversity of quiz content. It offers a user-friendly, multiple-choice question format, accompanied by a sophisticated scoring system that automatically evaluates users responses.',
@@ -36,7 +44,7 @@ export const projects = [
 		code: 'https://github.com/mosidrum/ques_web_app',
 	},
 	{
-		id: 5,
+		id: 6,
 		name: 'Recipe Web App',
 		description:
 			'This project is a culinary canvas where flavors come to life. Its a delightful culinary journey through a tapestry of recipes, offering a symphony of tastes from around the world.',
