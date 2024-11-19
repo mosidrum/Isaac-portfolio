@@ -10,6 +10,7 @@
 /* Light Mode (Default) */
 :root {
     --background-color: #000;
+    --background-color2: #030712;
     --nav-bar-color: #111827;
     --text-color-white: #fff;
     --text-secondary: #1296d3;
@@ -17,11 +18,13 @@
     --text-tetiary: #6c6a6a;
     --border: #3a3939;
     --line-opacity: 0.2;
+    --text-highlight: #e8960c
 }
 
 /* Dark Mode */
 .dark-theme {
     --background-color: #000;
+    --background-color2: #030712;
     --nav-bar-color: #111827;
     --text-color-white: #fff;
     --text-secondary: #1296d3;
@@ -29,6 +32,8 @@
     --text-tetiary: #6a6767;
     --border: #3a3939;
     --line-opacity: 0.2;
+    --text-highlight: #e8960c;
+
 }
 
 body {
@@ -44,8 +49,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1350px;
-    margin: 40px auto 0 auto;
+    max-width: 1250px;
+    margin: 40px auto 0;
 
     @media screen and (max-width: 1400px) {
         max-width: 90%;
