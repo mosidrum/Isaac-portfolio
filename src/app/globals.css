@@ -11,6 +11,7 @@
 :root {
     --background-color: #000;
     --background-color2: #030712;
+    --card-bg-color: #0f172a;
     --nav-bar-color: #111827;
     --text-color-white: #fff;
     --text-secondary: #1296d3;
@@ -25,6 +26,7 @@
 .dark-theme {
     --background-color: #000;
     --background-color2: #030712;
+    --card-bg-color: #0f172a;
     --nav-bar-color: #111827;
     --text-color-white: #fff;
     --text-secondary: #1296d3;
