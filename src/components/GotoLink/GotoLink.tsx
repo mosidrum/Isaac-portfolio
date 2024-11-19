@@ -1,14 +1,25 @@
+'use client';
+
 import Link, { LinkProps } from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './goto.module.css';
 
 type GotoLinkProps = {
   href: string;
   title: string;
-  underline?: boolean;
+  type?: string;
 } & LinkProps;
 
-export const GotoLink = ({ href, title, underline = true }: GotoLinkProps) => (
-  <Link href={href} className={underline ? styles.underline : ''}>
-    {title}
-  </Link>
-);
+export const GotoLink = ({ href, title, type }: GotoLinkProps) => {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
+  return (
+    <Link
+      href={href}
+      className={`${isActive ? styles.active : ''} text-decoration-none ${type === 'footer' ? 'text-tetiary' : 'text-white'}`}
+    >
+      {title}
+    </Link>
+  );
+};

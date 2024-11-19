@@ -6,8 +6,8 @@ import { navItems } from '../../utils';
 export const Navbar = () => (
   <div className={styles.container}>
     <div className={styles.wrapper}>
-      <Link href="/">
-        <h1 className={styles.title}>Isaac</h1>
+      <Link href="/" className={`${styles.title} text-decoration-none text-3xl `}>
+        Isaac
       </Link>
       <div className={styles.items}>
         {navItems.map((item, index) => (

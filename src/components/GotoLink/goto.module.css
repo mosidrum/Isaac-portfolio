@@ -1,3 +1,4 @@
-.underline {
-    text-decoration: none;
+.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }

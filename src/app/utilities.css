@@ -65,6 +65,9 @@
 .hover {
     cursor: pointer;
 }
+.text-decoration-none {
+    text-decoration: none;
+}
 
 /* Gap utilities (increments of 8px) */
 .gap-1 { gap: 8px; }

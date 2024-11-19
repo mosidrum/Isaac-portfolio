@@ -1,7 +1,7 @@
 type navItemType = {
-  name: string
-  link: string
-}
+  name: string;
+  link: string;
+};
 
 export const navItems: navItemType[] = [
   {
@@ -15,9 +15,5 @@ export const navItems: navItemType[] = [
   {
     name: 'Blog',
     link: '/blog'
-  },
-  {
-    name: 'Uses',
-    link: '/uses'
   }
 ];
