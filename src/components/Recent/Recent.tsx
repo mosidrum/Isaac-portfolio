@@ -3,8 +3,7 @@ import Link from 'next/link';
 import styles from './recent.module.css'
 import { projects } from '../../utils';
 
-export const Recent = () => {
-  return (
+export const Recent = () => (
     <div>
       <div className="flex-column gap-1">
        <div className="d-flex gap-2 align-items-center">
@@ -24,4 +23,3 @@ export const Recent = () => {
       </div>
     </div>
   )
-}

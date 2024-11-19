@@ -6,8 +6,8 @@ import { experiences } from '../../utils';
 export const Experience = () => (
   <div className={styles.container}>
       <div className="flex-item-center gap-2">
-        <IoBriefcase />
-        <div>Experience</div>
+        <IoBriefcase size={26} />
+        <div className="text-xl">Experience</div>
       </div>
       <div className="d-flex flex-column gap-3 mt-3">
         {experiences.map((experience, index) => (
