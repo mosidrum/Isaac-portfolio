@@ -11,9 +11,9 @@ const page = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Wes Bos's Uses.Tech
+        Wes Bos&apos;s Uses.Tech
       </a>{' '}
-      project, a collection of developer's setup, hardware and software.
+      project, a collection of developer&apos;s setup, hardware and software.
     </div>
     <div>
       <div>
