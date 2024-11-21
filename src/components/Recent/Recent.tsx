@@ -8,7 +8,7 @@ export const Recent = () => (
     <div className="flex-column gap-1">
       <div className="d-flex gap-2 align-items-center">
         <IoCodeSlash size={30} />
-        <div className=" text-2xl">Recent Work</div>
+        <div className="text-2xl">Recent Work</div>
       </div>
       <div>
         {projects.map((project, index) => (

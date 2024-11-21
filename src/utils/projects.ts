@@ -1,4 +1,11 @@
-export const projects = [
+type ProjectProps = {
+  title: string;
+  description: string;
+  link: string;
+  language: 'typescript' | 'javascript';
+};
+
+export const projects: ProjectProps[] = [
   {
     title: 'Portfolio Website',
     description:

@@ -4,7 +4,7 @@
     "color-hex-length": "short",
     "color-named": "never",
     "color-no-invalid-hex": true,
-    "unit-allowed-list": ["em", "rem", "%", "s", "px", "deg"],
+    "unit-allowed-list": ["em", "rem", "%", "s", "px", "deg", "fr"],
     "value-keyword-case": "lower",
     "number-max-precision": 2,
     "font-family-name-quotes": "always-where-recommended",
