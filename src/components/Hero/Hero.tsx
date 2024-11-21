@@ -5,15 +5,18 @@ import styles from './hero.module.css';
 export const iconItems = [
   {
     name: 'linkedin',
-    icon: <FaLinkedinIn size={24} />
+    icon: <FaLinkedinIn size={24} />,
+    link: 'https://www.linkedin.com/in/mosidrum'
   },
   {
     name: 'github',
-    icon: <FaGithub size={24} />
+    icon: <FaGithub size={24} />,
+    link: 'https://github.com/mosidrum/mosidrum'
   },
   {
     name: 'message',
-    icon: <FaRegEnvelope size={24} />
+    icon: <FaRegEnvelope size={24} />,
+    link: 'mailto:mosiokanga@gmail.com'
   }
 ];
 
@@ -32,7 +35,10 @@ export const Hero = () => (
     <div className="d-flex gap-2">
       {iconItems.map((item, index) => (
         <div className="text-xl mv-2 hover" key={index}>
-          {item.icon}
+          <a className="text-decoration-none text-tetiary" href={item.link}>
+            {' '}
+            {item.icon}
+          </a>
         </div>
       ))}
     </div>

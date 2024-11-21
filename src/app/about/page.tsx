@@ -13,6 +13,7 @@ import javascript from '../../assests/javascript.png';
 import typescript from '../../assests/typescript.png';
 import story from '../../assests/storybook.png';
 import node from '../../assests/nodejs.png';
+import { iconItems } from '../../components';
 
 const logos = [
   react,
@@ -30,9 +31,9 @@ const logos = [
 
 const page = () => (
   <div>
-    <div className="text-3xl">A little more about me!</div>
-    <div className="d-flex justify-content-between align-items-center">
-      <div className={`${styles.text} width-75 text-xl mt-2`}>
+    <div className="mb-2 text-2xl">A little more about me!</div>
+    <div className={styles.about}>
+      <div className={`${styles.text} text-xl mt-2`}>
         I am a highly <span className="text-highlight">motivated</span> and{' '}
         <span className="text-highlight">results-driven</span>
         <span className="text-highlight"> Software Engineer</span> with over three years of
@@ -55,12 +56,13 @@ const page = () => (
         <span className="text-highlight">software solutions</span> that drive business growth and
         enhance <span className="text-highlight">user experiences.</span>
       </div>
-      <Image src={Isaac} alt="Isaac Ayodele" className={styles.img} />
+      <div>
+        <Image src={Isaac} alt="Isaac Ayodele" className={styles.img} />
+      </div>
     </div>
     <div className="flex-column gap-4 mt-5">
       <div className="d-flex align-items-center justify-content-center text-2xl mt-5">
-        Some of my favourite&nbsp;<span className="gradient-text">technologies&nbsp;</span> to work
-        with
+        Some <span className="gradient-text">&nbsp;technologies&nbsp;</span> I work with
       </div>
       <div className={styles.logolist}>
         {logos.map((logo, index) => (

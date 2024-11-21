@@ -15,5 +15,9 @@ export const navItems: navItemType[] = [
   {
     name: 'Blog',
     link: '/blog'
+  },
+  {
+    name: 'Uses',
+    link: '/uses'
   }
 ];
