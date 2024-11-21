@@ -35,3 +35,8 @@
     background-color: var(--text-tetiary);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .list {
+  }
+}

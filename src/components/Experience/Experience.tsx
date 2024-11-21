@@ -12,18 +12,15 @@ export const Experience = () => (
     </div>
     <div className="d-flex flex-column gap-3 mt-3">
       {experiences.map((experience, index) => (
-        <div
-          key={index}
-          className={`d-flex justify-content-between align-items-end ${styles.list}`}
-        >
-          <div className="d-flex">
-            <Image src={experience.logo} alt={experience.name} className={styles.image} />
-            <div className="d-flex flex-column justify-content-between pl-2">
-              <div className="font-bold">{experience.name}</div>
-              <div className="font-normal text-tetiary">{experience.position}</div>
+        <div key={index} className="d-flex gap-2">
+          <Image src={experience.logo} alt={experience.name} className={styles.image} />
+          <div className="width-100">
+            <div className="mb-1">{experience.name}</div>
+            <div className="d-flex justify-content-between text-tetiary">
+              <div className="text-md">{experience.position}</div>
+              <div className="text-md">{experience.duration}</div>
             </div>
           </div>
-          <div className="font-normal text-tetiary">{experience.duration}</div>
         </div>
       ))}
       <button className={styles.button}>

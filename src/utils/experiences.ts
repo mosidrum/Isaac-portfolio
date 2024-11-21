@@ -8,24 +8,24 @@ export const experiences = [
     name: 'Lampstand',
     logo: lampstand,
     position: 'Software Engineer',
-    duration: 'April 2024 - Current'
+    duration: 'Apr 2024 - Current'
   },
   {
     name: 'SalesPlat',
     logo: salesPlat,
     position: 'Frontend Engineer',
-    duration: 'June 2024 - October 2024'
+    duration: 'Jun 2024 - Oct 2024'
   },
   {
     name: 'eUniversity Africa',
     logo: eua,
     position: 'Frontend Engineer',
-    duration: 'July 2023 - March 2024'
+    duration: 'Jul 2023 - Mar 2024'
   },
   {
     name: 'Microverse',
     logo: microverse,
     position: 'Software Engineer',
-    duration: 'March 2023 - September 2023'
+    duration: 'Mar 2023 - Sep 2023'
   }
 ];
