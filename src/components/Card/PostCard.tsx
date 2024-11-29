@@ -28,7 +28,7 @@ export const PostCard = ({
   >
     <div className="font-bold text-lg text-white">{title}</div>
     <div className="font-light text-white">{description}</div>
-    <div className="d-flex gap-3 text-tetiary">
+    <div className="d-flex gap-3 text-white">
       <div className="d-flex gap-1 align-items-center">
         <IoEyeOutline />
         <span>{seen}</span>
