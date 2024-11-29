@@ -5,8 +5,13 @@
     height: 90px;
     background: #111827;
     padding: 0 20px;
-    position: relative;
+    position: fixed;
     z-index: 10;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
 }
 
 .wrapper {
@@ -41,10 +46,27 @@
 }
 
 .dropdown {
-    position: absolute;
+    position: fixed;
+    top: 90px;
+    left: 0;
     width: 100%;
-    height: 500px;
-    background-color: #10b981;
-    top: 70px;
-    z-index: -99;
+    height: calc(100vh - 90px);
+    background-color: rgb(0 0 0 / 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.dropdown a:hover {
+    color: #10b981; /* Highlight color */
 }

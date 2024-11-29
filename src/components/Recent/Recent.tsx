@@ -13,7 +13,12 @@ export const Recent = () => (
       <div>
         {projects.map((project, index) => (
           <div key={index} className={`flex-column gap-1 ${styles.recent}`}>
-            <Link href={project.link} className="text-secondary text-lg hover">
+            <Link
+              href={project.link}
+              className="text-secondary text-lg hover"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {project.title}
             </Link>
             <p className="text-md">{project.description}</p>

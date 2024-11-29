@@ -21,7 +21,7 @@ const page = () => (
         {workStations.map((station, index) => (
           <div key={index} className="ml-5 mv-2">
             <div className="text-lg mb-1 font-bold text-secondary">{station.type}</div>
-            <span className="ml-2 text-tetiary"> - {station.desc}</span>
+            <span className="ml-2 text-white"> - {station.desc}</span>
           </div>
         ))}
       </div>
@@ -30,7 +30,7 @@ const page = () => (
         {softwares.map((software, index) => (
           <div key={index} className="ml-5 mv-2">
             <div className="text-lg mb-1 font-bold text-secondary">{software.type}</div>
-            <span className="ml-2 text-tetiary"> - {software.desc}</span>
+            <span className="ml-2 text-white"> - {software.desc}</span>
           </div>
         ))}
       </div>

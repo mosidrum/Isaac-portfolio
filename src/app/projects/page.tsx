@@ -3,8 +3,8 @@ import { projects } from '../../utils';
 import styles from './project.module.css';
 
 const page = () => (
-  <div className="d-flex flex-column gap-5">
-    <div className="mb-2 text-2xl">Github Projects</div>
+  <div className="d-flex mt-5 flex-column gap-5">
+    <div className="mb-2 text-2xl">Projects</div>
     <div className={styles.container}>
       {projects.map((project, index) => (
         <Card
@@ -12,6 +12,8 @@ const page = () => (
           title={project.title}
           description={project.description}
           language={project.language}
+          link={project.link}
+          githubLink={project.githubLink}
         />
       ))}
     </div>

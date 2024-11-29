@@ -13,7 +13,6 @@ import javascript from '../../assests/javascript.png';
 import typescript from '../../assests/typescript.png';
 import story from '../../assests/storybook.png';
 import node from '../../assests/nodejs.png';
-import { iconItems } from '../../components';
 
 const logos = [
   react,
@@ -30,7 +29,7 @@ const logos = [
 ];
 
 const page = () => (
-  <div>
+  <div className="mt-5">
     <div className="mb-2 text-2xl">A little more about me!</div>
     <div className={styles.about}>
       <div className={`${styles.text} text-xl mt-2`}>

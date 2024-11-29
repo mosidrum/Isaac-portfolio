@@ -1,6 +1,6 @@
 .card {
   width: 100%;
-  max-height: 300px; /* Define a maximum height for the card */
+  max-height: 300px;
   padding: 24px;
   display: flex;
   gap: 16px;
@@ -24,4 +24,37 @@
   height: 10px;
   border-radius: 50%;
   background-color: #3178c6;
+}
+
+.buttons {
+  text-decoration: none;
+  color: var(--text-color-white);
+  border: 1px solid var(--text-color-white);
+  border-radius: 10px;
+  padding: 8px 16px;
+  transform: translate(-2%, -2%);
+}
+
+.buttons:hover {
+  animation:  shake 0.8s;
+  background-color: var(--text-color-white);
+  color: var(--card-bg-color);
+}
+
+@keyframes shake{
+  0%{
+    transform: translateX(0)
+  }
+
+  25%{
+    transform: translateX(5px);
+  }
+
+  50%{
+    transform: translateX(-5px);
+  }
+
+  100%{
+    transform: translateX(0);
+  }
 }

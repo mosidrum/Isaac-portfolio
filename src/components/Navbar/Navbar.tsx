@@ -10,10 +10,15 @@ import { navItems } from '../../utils';
 
 export const Navbar = () => {
   const [hasOpen, setHasOpen] = useState(false);
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <Link href="/" className={`${styles.title} text-decoration-none text-3xl `}>
+        <Link
+          href="/"
+          className={`${styles.title} text-decoration-none text-3xl`}
+          style={{ fontFamily: 'Ole, cursive', fontSize: '5rem' }}
+        >
           Isaac
         </Link>
         <div className={styles.items}>
@@ -29,7 +34,15 @@ export const Navbar = () => {
           )}
         </div>
       </div>
-      {hasOpen && <div className={styles.dropdown}>menu list</div>}
+      {hasOpen && (
+        <div className={styles.dropdown}>
+          {navItems.map((item, index) => (
+            <Link href={item.link} key={index} onClick={() => setHasOpen(false)}>
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -4,7 +4,7 @@ import './globals.css';
 import { Footer, Navbar } from '../components';
 
 export const metadata: Metadata = {
-  title: 'Isaac Ayodele'
+  title: 'Isaac - Software Engineer'
 };
 
 // eslint-disable-next-line react/function-component-definition

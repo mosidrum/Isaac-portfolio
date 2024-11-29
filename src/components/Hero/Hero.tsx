@@ -11,7 +11,7 @@ export const iconItems = [
   {
     name: 'github',
     icon: <FaGithub size={24} />,
-    link: 'https://github.com/mosidrum/mosidrum'
+    link: 'https://github.com/mosidrum'
   },
   {
     name: 'message',
@@ -29,14 +29,18 @@ export const Hero = () => (
       most pressing challenges. My expertise lies in front-end development. I enjoy developing
       clean, accessible and high-performant web applications.
     </p>
-    <Link className="text-no-underline" href="/">
+    <Link className="text-no-underline" href="/about">
       <p className="text-secondary">More about me</p>
     </Link>
     <div className="d-flex gap-2">
       {iconItems.map((item, index) => (
         <div className="text-xl mv-2 hover" key={index}>
-          <a className="text-decoration-none text-tetiary" href={item.link}>
-            {' '}
+          <a
+            className="text-decoration-none text-tetiary"
+            href={item.link}
+            target="_blank"
+            rel="noreferrer"
+          >
             {item.icon}
           </a>
         </div>
