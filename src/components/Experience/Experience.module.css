@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid var(--border);
+  gap: 16px;
+  padding: 24px;
+  border-radius: 8px;
+
+    @media screen and (max-width: 1024px) {
+      max-width: 100%;
+    }
+  }
+
+.image {
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.list {
+  height: 40px;
+}
+
+.button {
+  background-color: var(--button-bg-color);
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  color: var(--text-color-white);
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--button-bg-color-hover);
+  }
+}

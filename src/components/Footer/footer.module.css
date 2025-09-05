@@ -1,0 +1,23 @@
+.footer {
+    color: var(--text-color-white);
+    margin-top: 90px;
+}
+
+.line {
+    opacity: var(--line-opacity);
+    color: var(--text-tetiary);
+}
+
+.bottom {
+    @media screen and (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+        align-items: center;
+    }
+}
+
+
+
+
