@@ -31,7 +31,7 @@ export const Experience = () => (
       <button className={styles.button}>
         <Link
           className="text-decoration-none button-color"
-          href="https://drive.google.com/file/d/1yJ4vYH0HYIBf0E-fykarF3_PdzqUZjHr/view?usp=sharing"
+          href="https://drive.google.com/file/d/1sNdDs076x777uw-hUg0EJnrLM534nQgP/view?usp=sharing"
           target="_blank"
         >
           Download Resume

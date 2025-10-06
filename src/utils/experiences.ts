@@ -1,20 +1,28 @@
 import eua from '../assests/eua.jpeg';
 import salesPlat from '../assests/salesplat.jpeg';
 import microverse from '../assests/microverse.jpeg';
+import lampstand from '../assests/lampstand logos_main lampsand logo.png';
 
 export const experiences = [
   {
+    name: 'Lampstand',
+    logo: lampstand,
+    position: 'Full stack Engineer',
+    duration: 'April 2024 - Current',
+    company: 'https://www.linkedin.com/company/lampstand-io/posts/?feedView=all'
+  },
+  {
     name: 'SalesPlat',
     logo: salesPlat,
-    position: 'Frontend Engineer',
-    duration: 'Jun 2024 - Current',
+    position: 'Full stack Engineerr',
+    duration: 'January 2024 - April 2024',
     company: 'https://www.linkedin.com/company/salesplat/posts/?feedView=all'
   },
   {
     name: 'eUniversity Africa',
     logo: eua,
-    position: 'Frontend Engineer',
-    duration: 'Jul 2023 - Mar 2024',
+    position: 'Full Stack Engineer',
+    duration: 'July 2023 - December 2023)',
     company: 'https://www.linkedin.com/company/euniversity-africa/posts/?feedView=all'
   },
   {

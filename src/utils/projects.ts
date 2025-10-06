@@ -2,11 +2,18 @@ type ProjectProps = {
   title: string;
   description: string;
   link: string;
-  githubLink: string;
+  githubLink?: string;
   language: 'typescript' | 'javascript';
 };
 
 export const projects: ProjectProps[] = [
+  {
+    title: 'Lampstand Marketing Website',
+    description:
+      'Contributed to the development of my current company’s marketing website, focusing on building responsive UI components, optimizing performance, and improving overall user experience.',
+    link: 'https://lampstand.io/',
+    language: 'typescript'
+  },
   {
     title: 'Portfolio Website',
     description:
