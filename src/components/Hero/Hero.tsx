@@ -25,13 +25,14 @@ export const Hero = () => (
     <div className="text-xl text-white">👋 Hello I am</div>
     <div className={styles.title}>Isaac Ayodele</div>
     <p className={styles.aboutme}>
-      As a focused software engineer with 3 years of expertise building solid systems, I like
-      translating complex problems into elegant solutions. My knowledge of programming languages
-      such as, JavaScript, Ruby, React, NextJs TypeScript, e.t.c combined with a solid foundation in
-      algorithms, data structures, software architecture, enables me to deliver high-quality code
-      and drive projects to successful completion. I am passionate about lifelong learning and
-      collaboration, and I am excited to join a dynamic team that fosters creativity and innovation.
-      Let us work together in building the future!
+      Full-Stack Engineer with <strong>5 years</strong> of end-to-end product delivery across
+      React/React Native frontends and Node.js/Express backends in monorepo environments. I
+      bootstrap services, design resilient REST APIs and authentication flows, implement secure file
+      upload/delete patterns, and ship component-driven frontends with Storybook and Jest. I enforce
+      TDD across the stack, define clear API contracts and CI/CD pipelines, add observability and
+      telemetry for product insights, and consistently reduce cycle time and regressions, examples
+      include shipping a cross-device reading-goal feature, bootstrapping a jobboard backend with
+      anonymous posting and bounties, and integrating full-stack tests into release pipelines.
     </p>
     <Link className="text-no-underline" href="/about">
       <p className="text-secondary">More about me</p>
