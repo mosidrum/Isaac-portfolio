@@ -1,41 +1,40 @@
-import { workStations, softwares } from '../../utils';
+import { toolCategories } from '@/data';
+import styles from './page.module.css';
 
-const page = () => (
-  <div className="d-flex flex-column gap-5">
-    <div className="mb-2 text-2xl">Uses</div>
-    <div>
-      This page draws inspiration from{' '}
-      <a
-        className="text-decoration-none text-secondary"
-        href="https://uses.tech"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Wes Bos&apos;s Uses.Tech
-      </a>{' '}
-      project, a collection of developer&apos;s setup, hardware and software.
-    </div>
-    <div className="d-flex justify-content-between">
-      <div>
-        <div className="text-xl font-bold">Workstation</div>
-        {workStations.map((station, index) => (
-          <div key={index} className="ml-5 mv-2">
-            <div className="text-lg mb-1 font-bold text-secondary">{station.type}</div>
-            <span className="ml-2 text-white"> - {station.desc}</span>
-          </div>
+export default function UsesPage() {
+  return (
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>Uses</h1>
+        <p className={styles.subtitle}>
+          My development environment, tools, and hardware setup. Inspired by{' '}
+          <a
+            href="https://uses.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            uses.tech
+          </a>
+          .
+        </p>
+      </header>
+
+      <div className={styles.categories}>
+        {toolCategories.map(({ category, items }) => (
+          <section key={category} className={styles.category}>
+            <h2 className={styles.categoryTitle}>{category}</h2>
+            <div className={styles.items}>
+              {items.map(({ name, description }) => (
+                <article key={name} className={styles.item}>
+                  <h3 className={styles.itemName}>{name}</h3>
+                  <p className={styles.itemDesc}>{description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
         ))}
       </div>
-      <div>
-        <div className="text-xl font-bold">Software</div>
-        {softwares.map((software, index) => (
-          <div key={index} className="ml-5 mv-2">
-            <div className="text-lg mb-1 font-bold text-secondary">{software.type}</div>
-            <span className="ml-2 text-white"> - {software.desc}</span>
-          </div>
-        ))}
-      </div>
     </div>
-  </div>
-);
-
-export default page;
+  );
+}

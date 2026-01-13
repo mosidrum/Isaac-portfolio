@@ -1,0 +1,102 @@
+.section {
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color-white);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.project:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.projectHeader {
+  margin-bottom: 0.5rem;
+}
+
+.projectTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: gap 0.2s ease;
+}
+
+.projectTitle:hover {
+  gap: 0.5rem;
+}
+
+.projectTitleText {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-color-white);
+  margin: 0 0 0.5rem;
+}
+
+.impact {
+  font-size: 0.875rem;
+  color: var(--text-tetiary);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech {
+  font-size: 0.75rem;
+  color: var(--text-tetiary);
+  background: var(--card-bg-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.viewAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: gap 0.2s ease;
+}
+
+.viewAll:hover {
+  gap: 0.5rem;
+}

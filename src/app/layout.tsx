@@ -1,26 +1,35 @@
-import React from 'react';
 import type { Metadata } from 'next';
+import { Navbar, Footer } from '@/components';
 import './globals.css';
-import { Footer, Navbar } from '../components';
 
 export const metadata: Metadata = {
-  title: 'Isaac - Software Engineer'
+  title: 'Isaac Ayodele | Senior Software Engineer',
+  description:
+    'Senior Software Engineer specializing in scalable frontend systems, React/React Native, and Node.js backends. 5+ years of end-to-end product delivery.',
+  keywords: [
+    'Software Engineer',
+    'Full Stack Developer',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'Node.js'
+  ],
+  authors: [{ name: 'Isaac Ayodele' }],
+  openGraph: {
+    title: 'Isaac Ayodele | Senior Software Engineer',
+    description:
+      'Senior Software Engineer specializing in scalable frontend systems and end-to-end product delivery.',
+    type: 'website'
+  }
 };
 
-// eslint-disable-next-line react/function-component-definition
-export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
         <Navbar />
-        <div className="layout-container">
-          <div className="content">{children}</div>
-          <Footer />
-        </div>
+        <main className="main-container">{children}</main>
+        <Footer />
       </body>
     </html>
   );

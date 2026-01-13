@@ -1,31 +1,39 @@
-import { PostCard } from '../../components';
-import { blogPosts } from '../../utils/blogPosts';
+import { BlogPostCard } from '@/components';
+import { blogPosts } from '@/data';
+import styles from './page.module.css';
 
-const page = () => (
-  <div className="d-flex flex-column gap-3">
-    <div className="mb-2 text-2xl">Blog Posts</div>
-    <div>
-      I write about web development, software engineering, and other topics on{' '}
-      <a className="text-secondary text-decoration-none" href="https://medium.com/">
-        medium
-      </a>
-      .
-    </div>
-    <div className="d-flex flex-column gap-3 max-with900 m-auto">
-      {blogPosts.map((blogPost, index) => (
-        <PostCard
-          key={index}
-          title={blogPost.title}
-          description={blogPost.description}
-          seen={blogPost.seen}
-          read={blogPost.read}
-          comment={blogPost.comment}
-          datePublished={blogPost.published}
-          link={blogPost.link}
-        />
-      ))}
-    </div>
-  </div>
-);
+export default function BlogPage() {
+  return (
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>Writing</h1>
+        <p className={styles.subtitle}>
+          Technical articles on architecture, engineering practices, and lessons learned from
+          building production systems. Published on{' '}
+          <a
+            href="https://medium.com/@mosiokanga"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            Medium
+          </a>
+          .
+        </p>
+      </header>
 
-export default page;
+      <div className={styles.posts}>
+        {blogPosts.map((post) => (
+          <BlogPostCard key={post.title} post={post} />
+        ))}
+      </div>
+
+      <div className={styles.cta}>
+        <p className={styles.ctaText}>
+          I write about frontend architecture, backend patterns, and engineering leadership. Follow
+          me on Medium for new articles.
+        </p>
+      </div>
+    </div>
+  );
+}
