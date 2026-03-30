@@ -1,0 +1,17 @@
+.container {
+  padding: 0 1rem;
+}
+
+.grid {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+}

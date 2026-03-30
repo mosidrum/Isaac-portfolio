@@ -1,31 +1,53 @@
-# 🌟 Portfolio
+# Isaac Ayodele | Senior Software Engineer Portfolio
 
-Welcome to my personal **portfolio**!  
-This project showcases my skills, projects, and experience as a software engineer.  
-It’s built with **Next.js** for performance, scalability, and a modern software engineer experience.
+A production-grade portfolio built with Next.js 15, TypeScript, and modern CSS architecture. Demonstrates clean code practices, component-driven development, and performance optimization.
 
----
+## Tech Stack
 
-## 🚀 Tech Stack
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: CSS Modules with design tokens
+- **Icons**: Lucide React
+- **Deployment**: Vercel
 
-- ⚡ **Next.js 14** – React framework for building fast web apps
-- 🎨 **CSS – styling and responsive design
-- 🔗 **TypeScript** – type safety and maintainability
-- 🌍 **Netlify** – hosting and deployment
+## Architecture
 
----
+```
+src/
+├── app/                    # Next.js App Router pages
+├── assets/                 # Static assets (images)
+├── components/
+│   ├── layout/            # Layout components (Navbar, Footer)
+│   ├── sections/          # Page sections (Hero, Experience, RecentWork)
+│   └── ui/                # Reusable UI components (ProjectCard, BlogPostCard)
+└── data/                  # Centralized data and type definitions
+```
 
-## 📸 Preview
-
-🔗 [Live link](https://isaacayodele.netlify.app)  
-
----
-
-## 🛠️ Getting Started
-
-Clone the repo and install dependencies:
+## Development
 
 ```bash
-git clone https://github.com/mosidrum/Isaac-portfolio.git
-cd Isaac-portfolio
-yarn install
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Run linting
+npm run lint
+```
+
+## Key Features
+
+- **Type-safe data layer** with centralized types
+- **Component-driven architecture** with clear separation of concerns
+- **Responsive design** with mobile-first approach
+- **Dark/Light theme** with system preference detection
+- **Accessible** with proper ARIA labels and keyboard navigation
+- **Performance optimized** with Next.js Image optimization
+
+## License
+
+MIT

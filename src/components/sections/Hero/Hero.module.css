@@ -1,0 +1,91 @@
+.hero {
+  padding: 2rem 0 3rem;
+  width: 100%;
+}
+
+.greeting {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.name {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+  background: linear-gradient(135deg, #10b981, #38bdf8, #0ea5e9, #fbbf24, #d946ef);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+}
+
+.summary {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-color-white);
+  margin: 0 0 1rem;
+}
+
+.summary strong {
+  color: var(--text-highlight);
+}
+
+.expertise {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-color-white);
+  margin: 0 0 1.5rem;
+}
+
+.cta {
+  margin-bottom: 1.5rem;
+}
+
+.ctaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: gap 0.2s ease;
+}
+
+.ctaLink:hover {
+  gap: 0.75rem;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tetiary);
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.socialLink:hover {
+  color: var(--text-secondary);
+  background: var(--card-bg-color);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 1rem 0 2rem;
+  }
+
+  .summary,
+  .expertise {
+    font-size: 1rem;
+  }
+}

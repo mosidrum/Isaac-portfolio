@@ -1,0 +1,157 @@
+.container {
+  padding: 2rem 1rem;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-color-white);
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-tetiary);
+  margin: 0;
+}
+
+.intro {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+}
+
+.content {
+  flex: 1;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-color-white);
+  margin: 0 0 1.25rem;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+.lead {
+  font-size: 1.1rem !important;
+}
+
+.content strong {
+  color: var(--text-highlight);
+}
+
+.imageWrapper {
+  flex-shrink: 0;
+}
+
+.image {
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  transform: rotate(2deg);
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: rotate(0deg);
+}
+
+.techSection {
+  margin-top: 4rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color-white);
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #bd0a40, #d39c11);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionSubtitle {
+  font-size: 1rem;
+  color: var(--text-tetiary);
+  text-align: center;
+  margin: 0 0 2.5rem;
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 2rem;
+  background: var(--card-bg-color);
+  border-radius: 16px;
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.techLogo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.techItem:hover .techLogo {
+  transform: scale(1.1);
+}
+
+.techName {
+  font-size: 0.8rem;
+  color: var(--text-tetiary);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .intro {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .image {
+    width: 220px;
+    transform: none;
+  }
+
+  .content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .techGrid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .techLogo {
+    width: 50px;
+    height: 50px;
+  }
+}

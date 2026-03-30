@@ -1,33 +1,34 @@
 import Link from 'next/link';
-import { Card } from '../../components';
-import { projects } from '../../utils';
-import styles from './project.module.css';
+import { ProjectCard } from '@/components';
+import { projects } from '@/data';
+import styles from './page.module.css';
 
-const page = () => (
-  <div className="d-flex mt-5 flex-column gap-5">
-    <div className="mb-2 text-2xl">Projects</div>
+const ProjectsPage = () => (
     <div className={styles.container}>
-      {projects.map((project, index) => (
-        <Card
-          key={index}
-          title={project.title}
-          description={project.description}
-          language={project.language}
-          link={project.link}
-          githubLink={project.githubLink}
-        />
-      ))}
+      <header className={styles.header}>
+        <h1 className={styles.title}>Projects</h1>
+        <p className={styles.subtitle}>
+          A selection of projects demonstrating architectural thinking, technical depth, and
+          measurable business impact.
+        </p>
+      </header>
+
+      <div className={styles.grid}>
+        {projects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
+      </div>
+
+      <div className={styles.cta}>
+        <p className={styles.ctaText}>
+          Interested in discussing enterprise projects or proprietary work from my professional
+          experience?{' '}
+          <Link href="mailto:mosiokanga@gmail.com" className={styles.ctaLink}>
+            Let&apos;s connect.
+          </Link>
+        </p>
+      </div>
     </div>
-    <div className="width-50 m-auto text-center mt-5">
-      To know more about the projects that I have worked on in various organizations, kindly{' '}
-      <Link
-        href="mailto:mosiokanga@gmail.com"
-        className="text-secondary hover text-decoration-none text-no-underline"
-      >
-        contact me.
-      </Link>
-    </div>
-  </div>
 );
 
-export default page;
+export default ProjectsPage;
