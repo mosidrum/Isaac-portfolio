@@ -3,8 +3,7 @@ import { Code2, ArrowUpRight } from 'lucide-react';
 import { featuredProjects } from '@/data';
 import styles from './RecentWork.module.css';
 
-export function RecentWork() {
-  return (
+export const RecentWork = () => (
     <section className={styles.section}>
       <header className={styles.header}>
         <Code2 size={28} />
@@ -47,5 +46,4 @@ export function RecentWork() {
         <ArrowUpRight size={16} />
       </Link>
     </section>
-  );
-}
+);

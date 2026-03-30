@@ -2,8 +2,7 @@ import { BlogPostCard } from '@/components';
 import { blogPosts } from '@/data';
 import styles from './page.module.css';
 
-export default function BlogPage() {
-  return (
+const BlogPage = () => (
     <div className={styles.container}>
       <header className={styles.header}>
         <h1 className={styles.title}>Writing</h1>
@@ -35,5 +34,6 @@ export default function BlogPage() {
         </p>
       </div>
     </div>
-  );
-}
+);
+
+export default BlogPage;

@@ -4,8 +4,7 @@ import { Briefcase, ExternalLink } from 'lucide-react';
 import { experiences, resumeUrl } from '@/data';
 import styles from './Experience.module.css';
 
-export function Experience() {
-  return (
+export const Experience = () => (
     <section className={styles.section}>
       <header className={styles.header}>
         <Briefcase size={24} />
@@ -47,5 +46,4 @@ export function Experience() {
         Download Resume
       </Link>
     </section>
-  );
-}
+);

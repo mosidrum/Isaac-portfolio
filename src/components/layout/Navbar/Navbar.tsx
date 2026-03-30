@@ -9,7 +9,7 @@ import styles from './Navbar.module.css';
 
 type Theme = 'light' | 'dark';
 
-export function Navbar() {
+export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState<Theme>('light');
   const pathname = usePathname();

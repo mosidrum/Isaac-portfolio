@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ExternalLink, Github, Smartphone } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import type { Project } from '@/data';
 import styles from './ProjectCard.module.css';
 
@@ -20,7 +20,7 @@ const AppleIcon = () => (
   </svg>
 );
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export const ProjectCard = ({ project }: ProjectCardProps) => {
   const { title, description, impact, techStack, liveUrl, sourceUrl, androidUrl, iosUrl } = project;
 
   return (

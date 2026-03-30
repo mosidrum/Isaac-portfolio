@@ -3,8 +3,7 @@ import { ProjectCard } from '@/components';
 import { projects } from '@/data';
 import styles from './page.module.css';
 
-export default function ProjectsPage() {
-  return (
+const ProjectsPage = () => (
     <div className={styles.container}>
       <header className={styles.header}>
         <h1 className={styles.title}>Projects</h1>
@@ -30,5 +29,6 @@ export default function ProjectsPage() {
         </p>
       </div>
     </div>
-  );
-}
+);
+
+export default ProjectsPage;

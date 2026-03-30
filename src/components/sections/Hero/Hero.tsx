@@ -9,24 +9,23 @@ const iconMap: Record<string, React.ReactNode> = {
   Email: <Mail size={22} />
 };
 
-export function Hero() {
-  return (
+export const Hero = () => (
     <section className={styles.hero}>
       <p className={styles.greeting}>Senior Software Engineer</p>
       <h1 className={styles.name}>Isaac Ayodele</h1>
 
       <p className={styles.summary}>
-        I design and deliver <strong>reliable, scalable software systems</strong> with a focus on
-        performance, maintainability, and long-term product impact. With 5+ years of end-to-end
-        product delivery, I build across the stack spanning modern web, mobile, and backend
-        platforms within fast-moving, production environments.
+        I build <strong>scalable, user-focused applications</strong> across web and mobile, with a
+        strong emphasis on performance, clean architecture, and maintainability. With over 5 years
+        of hands-on experience delivering production-ready products, I work comfortably across the
+        stack using modern JavaScript frameworks and backend services.
       </p>
 
       <p className={styles.expertise}>
-        I architect resilient APIs, implement secure authentication flows, design event-driven
-        workflows, and establish CI/CD pipelines that enable teams to ship with confidence. My work
-        consistently reduces cycle time and improves system stability through strong engineering
-        fundamentals, pragmatic testing, and clear architectural boundaries.
+        I develop robust APIs, integrate third-party services, and implement efficient UI systems
+        that enhance user experience and developer velocity. My approach focuses on writing clean,
+        reusable code, improving application reliability, and contributing to faster, more
+        predictable product delivery in collaborative environments.
       </p>
 
       <div className={styles.cta}>
@@ -51,5 +50,4 @@ export function Hero() {
         ))}
       </div>
     </section>
-  );
-}
+);

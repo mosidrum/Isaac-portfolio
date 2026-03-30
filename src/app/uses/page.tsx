@@ -1,8 +1,7 @@
 import { toolCategories } from '@/data';
 import styles from './page.module.css';
 
-export default function UsesPage() {
-  return (
+const UsesPage = () => (
     <div className={styles.container}>
       <header className={styles.header}>
         <h1 className={styles.title}>Uses</h1>
@@ -36,5 +35,6 @@ export default function UsesPage() {
         ))}
       </div>
     </div>
-  );
-}
+);
+
+export default UsesPage;

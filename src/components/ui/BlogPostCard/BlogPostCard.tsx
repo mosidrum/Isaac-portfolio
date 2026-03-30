@@ -6,7 +6,7 @@ interface BlogPostCardProps {
   post: BlogPost;
 }
 
-export function BlogPostCard({ post }: BlogPostCardProps) {
+export const BlogPostCard = ({ post }: BlogPostCardProps) => {
   const { title, excerpt, url, readTime, publishedAt, tags } = post;
 
   return (

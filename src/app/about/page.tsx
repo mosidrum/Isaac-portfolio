@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import profileImage from '@/assets/images/myself.jpg';
-import styles from './page.module.css';
 
 // Technology logos
 import reactLogo from '@/assets/images/react_logo.png';
@@ -18,6 +17,7 @@ import expoLogo from '@/assets/images/expo.png';
 import firebaseLogo from '@/assets/images/firebase.png';
 import gitLogo from '@/assets/images/git.png';
 import graphqlLogo from '@/assets/images/graph.png';
+import styles from './page.module.css';
 
 const technologies = [
   { src: reactLogo, name: 'React' },
@@ -37,8 +37,7 @@ const technologies = [
   { src: graphqlLogo, name: 'GraphQL' }
 ];
 
-export default function AboutPage() {
-  return (
+const AboutPage = () => (
     <div className={styles.container}>
       <header className={styles.header}>
         <h1 className={styles.title}>About Me</h1>
@@ -107,5 +106,6 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-  );
-}
+);
+
+export default AboutPage;

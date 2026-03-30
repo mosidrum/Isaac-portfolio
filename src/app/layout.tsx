@@ -23,8 +23,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
+const RootLayout = ({ children }: { children: React.ReactNode }) => (
     <html lang="en">
       <body>
         <Navbar />
@@ -32,5 +31,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
       </body>
     </html>
-  );
-}
+);
+
+export default RootLayout;

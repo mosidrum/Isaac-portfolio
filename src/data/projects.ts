@@ -6,6 +6,32 @@ import type { Project } from './types';
  */
 export const projects: Project[] = [
   {
+    title: 'CodePop — AI Code Intelligence Platform',
+    description:
+      'Built a fullstack AI-powered developer tool that allows engineers to paste code and instantly receive clear explanations, generate solutions for algorithms, and debug issues with contextual understanding.',
+    impact:
+      'Improved developer productivity by reducing time spent understanding unfamiliar code, debugging errors, and solving coding challenges through real-time AI-assisted workflows.',
+    techStack: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Node.js',
+      'Express',
+      'LLM Integration',
+      'OpenAI API',
+      'Prompt Engineering',
+      'AI Workflow Design',
+      'REST APIs',
+      'API Design',
+      'Serverless Functions',
+      'Vercel',
+      'Git',
+      'CI/CD'
+    ],
+    liveUrl: 'https://codepop-one.vercel.app/',
+    featured: true
+  },
+  {
     title: 'Lampstand Mobile App (Cross-Platform)',
     description:
       'Worked as a core contributor on a personalized mobile reading app focused on personal growth and habit formation. Played a key role in accelerating the path to production by unblocking long-standing tickets and delivering critical user-facing features such as the reader theme system.',
@@ -34,7 +60,8 @@ export const projects: Project[] = [
     title: 'Lampstand Marketing Platform',
     description:
       'Led frontend development for a high-traffic marketing platform, implementing performance-optimized React components and establishing design system patterns that reduced development time for new features.',
-    impact: 'Improved page load performance by 35% through code splitting and lazy loading strategies',
+    impact:
+      'Improved page load performance by 35% through code splitting and lazy loading strategies',
     techStack: ['React', 'TypeScript', 'Next.js', 'Storybook', 'Jest'],
     liveUrl: 'https://lampstand.io/',
     featured: true
@@ -44,7 +71,18 @@ export const projects: Project[] = [
     description:
       'Designed and implemented a scalable URL shortening service with analytics tracking, rate limiting, and collision-resistant hash generation. Built with clean architecture principles for maintainability.',
     impact: 'Handles high-throughput requests with sub-100ms response times',
-    techStack: ['Node.js', 'TypeScript', 'PostgreSQL', 'Redis', 'Docker', 'NextJs', 'Netlify', 'Jest', 'Render', 'React'],
+    techStack: [
+      'Node.js',
+      'TypeScript',
+      'PostgreSQL',
+      'Redis',
+      'Docker',
+      'NextJs',
+      'Netlify',
+      'Jest',
+      'Render',
+      'React'
+    ],
     sourceUrl: 'https://github.com/mosidrum/url_shortner',
     featured: true
   },

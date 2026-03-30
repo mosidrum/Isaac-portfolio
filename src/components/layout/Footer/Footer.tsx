@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { navItems, socialLinks } from '@/data';
 import styles from './Footer.module.css';
 
-export function Footer() {
+export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
