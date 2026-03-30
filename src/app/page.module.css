@@ -11,7 +11,7 @@
 
 @media (max-width: 1024px) {
   .grid {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 2rem;
   }
 }

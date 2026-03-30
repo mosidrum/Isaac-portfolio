@@ -1,5 +1,6 @@
 .hero {
   padding: 2rem 0 3rem;
+  width: 100%;
 }
 
 .greeting {
@@ -26,7 +27,6 @@
   line-height: 1.7;
   color: var(--text-color-white);
   margin: 0 0 1rem;
-  max-width: 680px;
 }
 
 .summary strong {
@@ -36,9 +36,8 @@
 .expertise {
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--text-tetiary);
+  color: var(--text-color-white);
   margin: 0 0 1.5rem;
-  max-width: 680px;
 }
 
 .cta {

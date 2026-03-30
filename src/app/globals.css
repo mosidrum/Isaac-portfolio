@@ -58,10 +58,10 @@ body {
 
 .main-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   min-height: calc(100vh - 70px);
   margin: 0 auto;
-  padding: 90px 1.5rem 2rem;
+  padding: 6rem 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -88,6 +88,6 @@ body,
 
 @media (max-width: 768px) {
   .main-container {
-    padding: 80px 1rem 1.5rem;
+    padding: 8rem 1rem;
   }
 }
