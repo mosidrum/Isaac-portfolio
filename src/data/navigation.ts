@@ -32,4 +32,4 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const resumeUrl =
-  'https://drive.google.com/file/d/1qOhrNvcUjaVNx7joeC0upDovAOilQuSz/view?usp=drive_link';
+  'https://drive.google.com/file/d/1zLTITZ8u6Aa8Jx99ympTNmxDzTYlUv_C/view?usp=sharing';
