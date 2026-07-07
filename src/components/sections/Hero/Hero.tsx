@@ -8,16 +8,17 @@ export const Hero = () => (
       <p className={styles.label}>Full-Stack Engineer · AI Systems · Remote</p>
 
       <h1 className={styles.headline}>
-        I ship<br /><span className={styles.dim}>production</span><br />
+        I ship
+        <br />
+        <span className={styles.dim}>production</span>
+        <br />
         software.
       </h1>
 
       <p className={styles.body}>
-        Five years building web and mobile products across startups — from REST API
-        design and database modelling to performant frontends and CI/CD. Currently
-        engineering AI agent infrastructure at Relaystack. I specialise in React,
-        Next.js, Node.js, and TypeScript, and I care about systems that hold up in
-        production, not just in demos.
+        I build software with longevity in mind. Clean architecture, thoughtful user experiences,
+        and reliable systems are the foundations I prioritize, because the best software isn't just
+        something that launches—it&#39;s something that continues to perform as it grows.
       </p>
 
       <p className={styles.status}>
