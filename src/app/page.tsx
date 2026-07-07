@@ -1,14 +1,12 @@
-import { Hero, Experience, RecentWork } from '@/components';
-import styles from './page.module.css';
+import { Hero, Capabilities, RecentWork, Experience } from '@/components';
 
 const Home = () => (
-  <div className={styles.container}>
+  <>
     <Hero />
-    <div className={styles.grid}>
-      <RecentWork />
-      <Experience />
-    </div>
-  </div>
+    <Capabilities />
+    <RecentWork />
+    <Experience />
+  </>
 );
 
 export default Home;

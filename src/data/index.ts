@@ -6,6 +6,5 @@
 export * from './types';
 export * from './experiences';
 export * from './projects';
-export * from './blog-posts';
 export * from './navigation';
 export * from './tools';

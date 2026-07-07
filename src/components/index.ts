@@ -7,7 +7,7 @@
 export { Navbar, Footer } from './layout';
 
 // Page sections
-export { Hero, Experience, RecentWork } from './sections';
+export { Hero, Experience, RecentWork, Capabilities } from './sections';
 
 // UI components
-export { ProjectCard, BlogPostCard } from './ui';
+export { ProjectCard } from './ui';

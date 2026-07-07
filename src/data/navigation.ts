@@ -5,9 +5,8 @@ import type { NavItem, SocialLink } from './types';
  */
 export const navItems: NavItem[] = [
   { label: 'Projects', href: '/projects' },
-  { label: 'About', href: '/about' },
-  { label: 'Writings', href: '/blog' },
-  { label: 'Uses', href: '/uses' }
+  { label: 'Blogs', href: '/blogs' },
+  { label: 'Tools', href: '/uses' }
 ];
 
 /**
@@ -31,4 +30,7 @@ export const socialLinks: SocialLink[] = [
   }
 ];
 
-export const resumeUrl = 'https://drive.google.com/drive/u/0/folders/1ci8gkHJVUI8m8P7jP2yxBy60eq1FapH_';
+export const resumeUrl =
+  'https://drive.google.com/file/d/1VThhNNYy3tPzaghqY6og9GNy5RcNCnKi/view?usp=sharing';
+
+export const calendlyUrl = 'https://calendly.com/mosidrum/30min';

@@ -1,49 +1,61 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { Briefcase, ExternalLink } from 'lucide-react';
 import { experiences, resumeUrl } from '@/data';
 import styles from './Experience.module.css';
 
 export const Experience = () => (
-    <section className={styles.section}>
-      <header className={styles.header}>
-        <Briefcase size={24} />
-        <h2 className={styles.title}>Experience</h2>
-      </header>
+  <section className={styles.section}>
+    <div className={styles.inner}>
+      <p className={styles.sectionLabel}>[Experience]</p>
 
-      <div className={styles.timeline}>
-        {experiences.map((exp) => (
+      <div className={styles.list}>
+        {experiences.map((exp, i) => (
           <article key={exp.company} className={styles.entry}>
-            <Link
-              href={exp.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.entryLink}
-            >
-              <Image
-                src={exp.logo}
-                alt={`${exp.company} logo`}
-                width={44}
-                height={44}
-                className={styles.logo}
-              />
-              <div className={styles.details}>
-                <div className={styles.companyRow}>
-                  <h3 className={styles.company}>{exp.company}</h3>
-                  <ExternalLink size={14} className={styles.externalIcon} />
-                </div>
-                <div className={styles.meta}>
-                  <span className={styles.role}>{exp.role}</span>
-                  <span className={styles.period}>{exp.period}</span>
-                </div>
+            <div className={styles.entryRow}>
+              <span className={styles.index}>0{i + 1}</span>
+
+              <div className={styles.entryMeta}>
+                <a
+                  href={exp.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.companyLink}
+                >
+                  {exp.logo ? (
+                    <Image
+                      src={exp.logo}
+                      alt={`${exp.company} logo`}
+                      width={32}
+                      height={32}
+                      className={styles.logo}
+                    />
+                  ) : (
+                    <span className={styles.logoFallback} aria-hidden="true">
+                      {exp.company[0]}
+                    </span>
+                  )}
+                  <div>
+                    <span className={styles.company}>{exp.company}</span>
+                    <span className={styles.role}>{exp.role}</span>
+                  </div>
+                  <span className={styles.arrow}>→</span>
+                </a>
               </div>
-            </Link>
+
+              <span className={styles.period}>{exp.period}</span>
+            </div>
+
           </article>
         ))}
       </div>
 
-      <Link href={resumeUrl} target="_blank" rel="noopener noreferrer" className={styles.resumeBtn}>
-        Download Resume
-      </Link>
-    </section>
+      <a
+        href={resumeUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.resumeLink}
+      >
+        View full resume →
+      </a>
+    </div>
+  </section>
 );

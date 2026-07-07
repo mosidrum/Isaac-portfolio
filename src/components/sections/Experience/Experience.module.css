@@ -1,126 +1,206 @@
 .section {
-  width: 100%;
-  max-width: 420px;
-  padding: 1.5rem;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--card-bg-color);
+  border-top: 1px solid var(--border);
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  color: var(--text-color-white);
+.inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(60px, 8vh, 100px) var(--pad-x);
 }
 
-.title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0;
+.sectionLabel {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--text);
+  margin-bottom: 2.5rem;
 }
 
-.timeline {
+.list {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 0;
 }
 
+/* ─── Entry ─── */
 .entry {
-  position: relative;
-}
-
-.entryLink {
   display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+  gap: 0.85rem;
+  transition: background 0.15s ease;
+}
+
+.entry:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.entryRow {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  align-items: center;
   gap: 1rem;
-  text-decoration: none;
-  padding: 0.5rem;
-  margin: -0.5rem;
-  border-radius: 8px;
-  transition: background 0.2s ease;
 }
 
-.entryLink:hover {
-  background: var(--background-color);
-}
-
-.logo {
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
-  object-fit: cover;
+.index {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--faint);
+  letter-spacing: 0.06em;
   flex-shrink: 0;
 }
 
-.details {
-  flex: 1;
+.entryMeta {
   min-width: 0;
 }
 
-.companyRow {
+.companyLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.logoFallback {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  flex-shrink: 0;
+  text-transform: uppercase;
 }
 
 .company {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-color-white);
-  margin: 0;
-}
-
-.externalIcon {
-  color: var(--text-tetiary);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.entryLink:hover .externalIcon {
-  opacity: 1;
-}
-
-.meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.25rem;
-  gap: 0.5rem;
+  display: block;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  transition: color 0.15s ease;
 }
 
 .role {
-  font-size: 0.875rem;
-  color: var(--text-tetiary);
+  display: block;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.67rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-top: 0.1rem;
+}
+
+.arrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.85rem;
+  color: var(--faint);
+  transition: color 0.15s ease, transform 0.15s ease;
+  display: inline-block;
+  margin-left: 0.15rem;
+}
+
+.companyLink:hover .company {
+  color: var(--text);
+}
+
+.companyLink:hover .arrow {
+  color: var(--text);
+  transform: translateX(3px);
 }
 
 .period {
-  font-size: 0.8rem;
-  color: var(--text-tetiary);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.67rem;
+  color: var(--faint);
+  letter-spacing: 0.04em;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.resumeBtn {
-  display: block;
-  width: 100%;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1rem;
-  background: var(--button-bg-color);
-  color: var(--button-color);
-  text-align: center;
+/* ─── Highlights ─── */
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 calc(2.5rem + 1rem + 32px + 0.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.highlight {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--muted);
+  position: relative;
+  padding-left: 1rem;
+}
+
+.highlight::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--faint);
+}
+
+/* ─── Resume Link ─── */
+.resumeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 2rem;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  border-radius: 8px;
-  transition: background 0.2s ease;
+  border-bottom: 1px solid var(--border-strong);
+  padding-bottom: 1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.resumeBtn:hover {
-  background: var(--button-bg-color-hover);
+.resumeLink:hover {
+  color: var(--text);
+  border-color: var(--text);
 }
 
-@media (max-width: 1024px) {
-  .section {
-    max-width: 100%;
+/* ─── Mobile ─── */
+@media (max-width: 640px) {
+  .entryRow {
+    grid-template-columns: 2rem 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .period {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: -0.4rem;
+  }
+
+  .highlights {
+    margin-left: 0;
   }
 }

@@ -1,78 +1,154 @@
-.container {
-  padding: 2rem 1rem;
+.page {
+  padding-top: var(--nav-h);
 }
 
-.header {
-  margin-bottom: 3rem;
+.inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(60px, 10vh, 120px) var(--pad-x) clamp(80px, 12vh, 140px);
 }
 
-.title {
-  font-size: clamp(2rem, 4vw, 2.5rem);
+.label {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.88rem;
   font-weight: 700;
-  color: var(--text-color-white);
-  margin: 0 0 0.5rem;
+  letter-spacing: 0.16em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.headline {
+  font-family: var(--font-mono), monospace;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 1rem;
 }
 
 .subtitle {
-  font-size: 1rem;
-  color: var(--text-tetiary);
-  margin: 0;
-  max-width: 600px;
-  line-height: 1.6;
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
 }
 
-.link {
-  color: var(--text-secondary);
-  text-decoration: none;
+/* ─── Filter Tabs ─── */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.link:hover {
-  text-decoration: underline;
+.tab {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
 }
 
-.categories {
+.tab:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.tabActive {
+  color: var(--text) !important;
+  border-color: var(--text) !important;
+  background: var(--surface-hover) !important;
+}
+
+/* ─── Tool Cards Grid ─── */
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
-}
-
-.category {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.categoryTitle {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text-color-white);
-  margin: 0;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--text-secondary);
-}
-
-.items {
-  display: flex;
-  flex-direction: column;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1rem;
 }
 
-.item {
-  padding: 1rem;
-  background: var(--card-bg-color);
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 8px;
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
 }
 
-.itemName {
-  font-size: 1rem;
+.card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.cardCategory {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  opacity: 0.75;
+}
+
+.cardName {
+  font-family: var(--font-heading), monospace;
+  font-size: 0.92rem;
   font-weight: 600;
-  color: var(--text-secondary);
-  margin: 0 0 0.35rem;
+  color: var(--text);
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
 }
 
-.itemDesc {
-  font-size: 0.9rem;
-  color: var(--text-tetiary);
+.cardDesc {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.83rem;
+  color: var(--muted);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+/* ─── Footer note ─── */
+.footer {
+  margin-top: 3rem;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.68rem;
+  color: var(--faint);
+  letter-spacing: 0.06em;
+}
+
+.link {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-strong);
+  padding-bottom: 1px;
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    gap: 0.4rem;
+  }
 }
