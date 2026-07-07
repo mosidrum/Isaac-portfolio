@@ -1,49 +1,37 @@
 import Link from 'next/link';
-import { Code2, ArrowUpRight } from 'lucide-react';
 import { featuredProjects } from '@/data';
 import styles from './RecentWork.module.css';
 
 export const RecentWork = () => (
-    <section className={styles.section}>
-      <header className={styles.header}>
-        <Code2 size={28} />
-        <h2 className={styles.title}>Recent Work</h2>
-      </header>
+  <section className={styles.section}>
+    <div className={styles.inner}>
+      <p className={styles.sectionLabel}>[Selected Work]</p>
 
-      <div className={styles.projects}>
-        {featuredProjects.map((project) => (
-          <article key={project.title} className={styles.project}>
-            <div className={styles.projectHeader}>
-              {project.liveUrl ? (
-                <Link
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.projectTitle}
-                >
-                  {project.title}
-                  <ArrowUpRight size={16} />
-                </Link>
-              ) : (
-                <span className={styles.projectTitleText}>{project.title}</span>
-              )}
+      <div className={styles.list}>
+        {featuredProjects.map((project, idx) => (
+          <Link key={project.slug} href={`/projects/${project.slug}`} className={styles.row}>
+            <div className={styles.rowLeft}>
+              <span className={styles.number}>
+                {String(idx + 1).padStart(2, '0')}
+              </span>
+              <div className={styles.meta}>
+                <h3 className={styles.projectName}>{project.title}</h3>
+                <p className={styles.description}>{project.description}</p>
+                <div className={styles.tech}>
+                  {project.techStack.slice(0, 5).map((t) => (
+                    <span key={t} className={styles.pill}>{t}</span>
+                  ))}
+                </div>
+              </div>
             </div>
-            <p className={styles.description}>{project.description}</p>
-            <p className={styles.impact}>{project.impact}</p>
-            <div className={styles.techStack}>
-              {project.techStack.map((tech) => (
-                <span key={tech} className={styles.tech}>
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </article>
+            <span className={styles.arrow} aria-hidden="true">→</span>
+          </Link>
         ))}
       </div>
 
       <Link href="/projects" className={styles.viewAll}>
-        View all projects
-        <ArrowUpRight size={16} />
+        View all projects →
       </Link>
-    </section>
+    </div>
+  </section>
 );

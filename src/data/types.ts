@@ -7,14 +7,20 @@ import type { StaticImageData } from 'next/image';
 
 export interface Experience {
   company: string;
-  logo: StaticImageData;
+  logo?: StaticImageData;
   role: string;
   period: string;
   url: string;
   highlights?: string[];
 }
 
+export interface ProjectFeature {
+  title: string;
+  body: string;
+}
+
 export interface Project {
+  slug: string;
   title: string;
   description: string;
   impact: string;
@@ -24,15 +30,14 @@ export interface Project {
   iosUrl?: string;
   sourceUrl?: string;
   featured?: boolean;
-}
-
-export interface BlogPost {
-  title: string;
-  excerpt: string;
-  url: string;
-  readTime: string;
-  publishedAt: string;
-  tags?: string[];
+  /* Detail page fields */
+  role?: string;
+  timeline?: string;
+  category?: string;
+  overview?: string;
+  constraint?: string;
+  features?: ProjectFeature[];
+  closingStatement?: string;
 }
 
 export interface NavItem {

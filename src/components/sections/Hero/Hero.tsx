@@ -1,53 +1,51 @@
 import Link from 'next/link';
-import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
-import { socialLinks } from '@/data';
+import { calendlyUrl, resumeUrl } from '@/data';
 import styles from './Hero.module.css';
 
-const iconMap: Record<string, React.ReactNode> = {
-  LinkedIn: <Linkedin size={22} />,
-  GitHub: <Github size={22} />,
-  Email: <Mail size={22} />
-};
-
 export const Hero = () => (
-    <section className={styles.hero}>
-      <p className={styles.greeting}>Senior Software Engineer</p>
-      <h1 className={styles.name}>Isaac Ayodele</h1>
+  <section className={styles.hero}>
+    <div className={styles.inner}>
+      <p className={styles.label}>Full-Stack Engineer · AI Systems · Remote</p>
 
-      <p className={styles.summary}>
-        I build <strong>scalable, user-focused applications</strong> across web and mobile, with a
-        strong emphasis on performance, clean architecture, and maintainability. With over 5 years
-        of hands-on experience delivering production-ready products, I work comfortably across the
-        stack using modern JavaScript frameworks and backend services.
+      <h1 className={styles.headline}>
+        I ship<br /><span className={styles.dim}>production</span><br />
+        software.
+      </h1>
+
+      <p className={styles.body}>
+        Five years building web and mobile products across startups — from REST API
+        design and database modelling to performant frontends and CI/CD. Currently
+        engineering AI agent infrastructure at Relaystack. I specialise in React,
+        Next.js, Node.js, and TypeScript, and I care about systems that hold up in
+        production, not just in demos.
       </p>
 
-      <p className={styles.expertise}>
-        I develop robust APIs, integrate third-party services, and implement efficient UI systems
-        that enhance user experience and developer velocity. My approach focuses on writing clean,
-        reusable code, improving application reliability, and contributing to faster, more
-        predictable product delivery in collaborative environments.
+      <p className={styles.status}>
+        <span className={styles.dot} aria-hidden="true" />
+        Building at Relaystack. Open to remote full-stack and frontend roles.
       </p>
 
-      <div className={styles.cta}>
-        <Link href="/about" className={styles.ctaLink}>
-          <span>Learn more about my work</span>
-          <ArrowRight size={18} />
+      <div className={styles.ctas}>
+        <Link href="/projects" className={`${styles.ctaPrimary} cta-glow`}>
+          View work →
         </Link>
+        <a
+          href={resumeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.ctaSecondary}
+        >
+          Download CV
+        </a>
+        <a
+          href={calendlyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.ctaSecondary}
+        >
+          Book a call →
+        </a>
       </div>
-
-      <div className={styles.social}>
-        {socialLinks.map(({ platform, url, ariaLabel }) => (
-          <a
-            key={platform}
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.socialLink}
-            aria-label={ariaLabel}
-          >
-            {iconMap[platform]}
-          </a>
-        ))}
-      </div>
-    </section>
+    </div>
+  </section>
 );

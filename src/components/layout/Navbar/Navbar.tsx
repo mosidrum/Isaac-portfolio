@@ -1,39 +1,24 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Sun, Moon } from 'lucide-react';
-import { navItems } from '@/data';
+import { Menu, X } from 'lucide-react';
+import { navItems, resumeUrl } from '@/data';
+import { LiveClock } from './LiveClock';
 import styles from './Navbar.module.css';
-
-type Theme = 'light' | 'dark';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<Theme>('light');
   const pathname = usePathname();
-
-  useEffect(() => {
-    const savedTheme = (localStorage.getItem('theme') as Theme) || 'light';
-    setTheme(savedTheme);
-    document.documentElement.className = savedTheme;
-  }, []);
-
-  const toggleTheme = useCallback(() => {
-    const newTheme: Theme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.className = newTheme;
-  }, [theme]);
 
   const closeMenu = useCallback(() => setIsMenuOpen(false), []);
 
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <Link href="/" className={styles.logo} aria-label="Home">
-          Isaac
+        <Link href="/" className={styles.logo} aria-label="Home — Isaac Ayodele">
+          isaac ayodele
         </Link>
 
         <ul className={styles.navLinks}>
@@ -49,14 +34,17 @@ export const Navbar = () => {
           ))}
         </ul>
 
+        <LiveClock />
+
         <div className={styles.actions}>
-          <button
-            onClick={toggleTheme}
-            className={styles.themeToggle}
-            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+          <a
+            href={resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.hireBtn} cta-glow`}
           >
-            {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
-          </button>
+            Hire me →
+          </a>
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -64,7 +52,7 @@ export const Navbar = () => {
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </nav>
@@ -83,16 +71,20 @@ export const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href={resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${styles.mobileHireBtn} cta-glow`}
+                onClick={closeMenu}
+              >
+                Hire me →
+              </a>
+            </li>
           </ul>
-          <button
-            onClick={toggleTheme}
-            className={styles.mobileThemeToggle}
-            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-          >
-            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-          </button>
         </div>
       )}
     </header>
   );
-}
+};
