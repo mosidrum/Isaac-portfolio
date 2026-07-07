@@ -25,6 +25,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://isaacayodele.netlify.app'),
   title: 'Isaac Ayodele | Senior Software Engineer',
   description:
     'Senior Software Engineer with 5+ years building production systems across web and mobile. Full-stack expertise in React, Node.js, TypeScript, and React Native.',
@@ -44,7 +45,8 @@ export const metadata: Metadata = {
     description:
       'Senior Software Engineer with 5+ years building production systems across web and mobile.',
     type: 'website',
-    url: 'https://isaacayodele.vercel.app'
+    url: 'https://isaacayodele.netlify.app',
+    siteName: 'Isaac Ayodele'
   },
   twitter: {
     card: 'summary_large_image',
