@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import { UsesClient } from './UsesClient';
 
 export const metadata: Metadata = {
-  title: 'Uses — Isaac Ayodele',
-  description: 'My development environment, tools, and hardware setup.'
+  title: 'Uses',
+  description: 'Development environment, tools, and hardware setup.',
+  alternates: { canonical: '/uses' }
 };
 
 const UsesPage = () => <UsesClient />;
