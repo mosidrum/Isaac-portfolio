@@ -4,8 +4,9 @@ import { getAllPosts, formatDate } from '@/lib/blog';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Writings — Isaac Ayodele',
-  description: 'Thoughts on software engineering, system design, and building production systems.'
+  title: 'Writing',
+  description: 'Notes on software engineering, system design, and production systems.',
+  alternates: { canonical: '/blogs' }
 };
 
 const BlogsPage = () => {
@@ -14,9 +15,9 @@ const BlogsPage = () => {
   return (
     <div className={styles.page}>
       <div className={styles.inner}>
-        <p className={styles.label}>Writings</p>
+        <p className="sheet-label">Writing</p>
         <h1 className={styles.headline}>
-          Thoughts on engineering<br />and building things.
+          Thoughts on engineering <span className="serif">and building things.</span>
         </h1>
 
         {posts.length === 0 ? (
@@ -28,7 +29,10 @@ const BlogsPage = () => {
                 <div className={styles.rowLeft}>
                   <span className={styles.number}>{String(idx + 1).padStart(2, '0')}</span>
                   <div className={styles.meta}>
-                    <h2 className={styles.title}>{post.title}</h2>
+                    <h2 className={styles.title}>
+                      {post.title}
+                      {post.draft ? <span className={styles.tag}> · Draft</span> : null}
+                    </h2>
                     <p className={styles.excerpt}>{post.excerpt}</p>
                     <div className={styles.tags}>
                       {post.tags.map((tag) => (
