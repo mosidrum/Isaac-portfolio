@@ -1,0 +1,15 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f0;
+  border-radius: 6px;
+  padding: 0.5rem 0.7rem;
+}
+
+.image {
+  display: block;
+  max-height: 1.6rem;
+  width: auto;
+  height: auto;
+}
