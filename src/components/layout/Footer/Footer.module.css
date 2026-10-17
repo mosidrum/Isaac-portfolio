@@ -5,74 +5,90 @@
 .inner {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 1.75rem var(--pad-x);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  padding: 2.5rem var(--pad-x) 2rem;
 }
 
-.navLinks {
+.block {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
+}
+
+.cell {
+  padding: 0.85rem 1.1rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cell:nth-child(2n) {
+  border-right: 0;
+}
+
+.cell:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.key {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.value {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.navLinks,
+.social {
   display: flex;
   gap: 1.5rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  flex-wrap: wrap;
 }
 
 .navLink {
   font-family: var(--font-mono), monospace;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--faint);
+  color: var(--muted);
   text-decoration: none;
   transition: color 0.15s ease;
 }
 
 .navLink:hover {
-  color: var(--muted);
+  color: var(--signal);
 }
 
-.right {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
+@media (min-width: 760px) {
+  .block {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 
-.social {
-  display: flex;
-  gap: 1.25rem;
-}
+  .cell {
+    border-bottom: 0;
+  }
 
-.socialLink {
-  font-family: var(--font-mono), monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--faint);
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
+  .cell:nth-child(2n) {
+    border-right: 1px solid var(--border);
+  }
 
-.socialLink:hover {
-  color: var(--muted);
-}
-
-.copyright {
-  font-family: var(--font-mono), monospace;
-  font-size: 0.68rem;
-  color: var(--faint);
-  letter-spacing: 0.04em;
-  margin: 0;
-}
-
-@media (max-width: 640px) {
-  .inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+  .cell:last-child {
+    border-right: 0;
   }
 }
