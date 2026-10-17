@@ -1,52 +1,60 @@
 import Link from 'next/link';
-import { calendlyUrl, resumeUrl } from '@/data';
+import { email, location } from '@/data';
+import { AgentConsole } from './AgentConsole';
 import styles from './Hero.module.css';
+
+const proof = [
+  { value: '5+', label: 'years shipping to production' },
+  { value: '5', label: 'teams, startup to contract' },
+  { value: '2 stores', label: 'App Store and Play Store' },
+  { value: 'AI to banking', label: 'agents and a core-banking BFF' }
+];
 
 export const Hero = () => (
   <section className={styles.hero}>
     <div className={styles.inner}>
-      <p className={styles.label}>Full-Stack Engineer · AI Systems · Remote</p>
+      <div className={styles.copy}>
+        <p className={styles.chip}>
+          <span className={styles.dot} aria-hidden="true" />
+          Open to remote roles · {location}
+        </p>
 
-      <h1 className={styles.headline}>
-        I ship
-        <br />
-        <span className={styles.dim}>production</span>
-        <br />
-        software.
-      </h1>
+        <h1 className={styles.headline}>
+          Full-stack engineer building AI agent systems{' '}
+          <span className={`serif ${styles.accent}`}>that finish the work.</span>
+        </h1>
 
-      <p className={styles.body}>
-        I build software with longevity in mind. Clean architecture, thoughtful user experiences,
-        and reliable systems are the foundations I prioritize, because the best software isn't just
-        something that launches—it&#39;s something that continues to perform as it grows.
-      </p>
+        <p className={styles.body}>
+          I build the agents, the APIs behind them and the interfaces people use. Five years of
+          production web and mobile work, from startups to banking middleware.
+        </p>
 
-      <p className={styles.status}>
-        <span className={styles.dot} aria-hidden="true" />
-        Building at Relaystack. Open to remote full-stack and frontend roles.
-      </p>
+        <div className={styles.ctas}>
+          <Link href="/#work" className={`${styles.ctaPrimary} cta-glow`}>
+            See the systems
+          </Link>
+          <a href={`mailto:${email}`} className={styles.ctaSecondary}>
+            Email me
+          </a>
+        </div>
 
-      <div className={styles.ctas}>
-        <Link href="/projects" className={`${styles.ctaPrimary} cta-glow`}>
-          View work →
-        </Link>
-        <a
-          href={resumeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.ctaSecondary}
-        >
-          Download CV
-        </a>
-        <a
-          href={calendlyUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.ctaSecondary}
-        >
-          Book a call →
-        </a>
+        <p className={styles.hint}>
+          or press <kbd>⌘</kbd> <kbd>K</kbd> and ask me anything
+        </p>
       </div>
+
+      <div className={styles.visual}>
+        <AgentConsole />
+      </div>
+
+      <dl className={styles.proof}>
+        {proof.map((item) => (
+          <div key={item.label} className={styles.proofItem}>
+            <dt className={styles.proofValue}>{item.value}</dt>
+            <dd className={styles.proofLabel}>{item.label}</dd>
+          </div>
+        ))}
+      </dl>
     </div>
   </section>
 );
