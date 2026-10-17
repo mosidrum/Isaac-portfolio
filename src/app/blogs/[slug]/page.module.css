@@ -22,7 +22,7 @@
 }
 
 .back:hover {
-  color: var(--text);
+  color: var(--signal);
 }
 
 .header {
@@ -39,9 +39,9 @@
 .tag {
   font-family: var(--font-mono), monospace;
   font-size: 0.68rem;
-  color: var(--muted);
-  background: var(--surface);
-  border: 1px solid var(--border);
+  color: var(--signal);
+  background: var(--signal-dim);
+  border: 1px solid transparent;
   padding: 0.2rem 0.55rem;
   border-radius: 4px;
   letter-spacing: 0.02em;
@@ -80,4 +80,44 @@
 .inner .article {
   font-family: var(--font-body), sans-serif;
   max-width: none;
+}
+
+.toc {
+  border-top: 2px solid var(--signal);
+  max-width: 680px;
+  margin: 0 0 2.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.tocLabel {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--signal);
+  margin-bottom: 0.6rem;
+}
+
+.tocList {
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.88rem;
+}
+
+.tocList a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.tocList a:hover {
+  color: var(--text);
+}
+
+.tocSub {
+  padding-left: 1rem;
 }
