@@ -4,10 +4,10 @@
  */
 
 // Layout components
-export { Navbar, Footer } from './layout';
+export { Navbar, Footer, CommandPalette } from './layout';
 
 // Page sections
-export { Hero, Experience, RecentWork, Capabilities } from './sections';
+export { Hero, Experience, RecentWork, Capabilities, HowIWork, Contact } from './sections';
 
 // UI components
-export { ProjectCard } from './ui';
+export { Blueprint, Reveal, SectionHead } from './ui';
