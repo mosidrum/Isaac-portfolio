@@ -1,31 +1,33 @@
 import type { NavItem, SocialLink } from './types';
+import { email, githubUrl, linkedinUrl } from './site';
 
-/**
- * Navigation configuration for consistent routing across the application.
- */
 export const navItems: NavItem[] = [
-  { label: 'Projects', href: '/projects' },
-  { label: 'Blogs', href: '/blogs' },
+  { label: 'Work', href: '/projects' },
+  { label: 'Experience', href: '/#experience' },
+  { label: 'Writing', href: '/blogs' }
+];
+
+export const footerNavItems: NavItem[] = [
+  { label: 'Work', href: '/projects' },
+  { label: 'Writing', href: '/blogs' },
+  { label: 'Résumé', href: '/resume' },
   { label: 'Tools', href: '/uses' }
 ];
 
-/**
- * Social and professional links for networking and contact.
- */
 export const socialLinks: SocialLink[] = [
   {
     platform: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/mosidrum',
+    url: linkedinUrl,
     ariaLabel: 'Connect on LinkedIn'
   },
   {
     platform: 'GitHub',
-    url: 'https://github.com/mosidrum',
+    url: githubUrl,
     ariaLabel: 'View GitHub profile'
   },
   {
     platform: 'Email',
-    url: 'mailto:mosiokanga@gmail.com',
+    url: `mailto:${email}`,
     ariaLabel: 'Send an email'
   }
 ];
