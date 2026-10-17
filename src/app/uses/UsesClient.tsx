@@ -28,9 +28,9 @@ export const UsesClient = () => {
   return (
     <div className={styles.page}>
       <div className={styles.inner}>
-        <p className={styles.label}>[Uses]</p>
+        <p className="sheet-label">Uses</p>
         <h1 className={styles.headline}>
-          My setup &amp;<br />daily toolkit.
+          My setup &amp; <span className="serif">daily toolkit.</span>
         </h1>
         <p className={styles.subtitle}>
           {totalTools} tools across {toolCategories.length} categories — everything I use to build, ship, and collaborate.
@@ -46,7 +46,7 @@ export const UsesClient = () => {
               className={`${styles.tab} ${active === tab ? styles.tabActive : ''}`}
               onClick={() => setActive(tab)}
             >
-              {tab === ALL ? tab : (CATEGORY_ICONS[tab] ?? '·') + ' ' + tab}
+              {tab === ALL ? tab : `${CATEGORY_ICONS[tab] ?? '·'} ${tab}`}
             </button>
           ))}
         </div>
