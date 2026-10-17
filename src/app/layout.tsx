@@ -1,6 +1,20 @@
-import type { Metadata } from 'next';
-import { Space_Grotesk, Space_Mono, DM_Sans } from 'next/font/google';
-import { Navbar, Footer } from '@/components';
+import type { Metadata, Viewport } from 'next';
+import type { ReactNode } from 'react';
+/* eslint-disable camelcase -- Next.js font exports use the family name with underscores. */
+import { Space_Grotesk, Space_Mono, DM_Sans, Instrument_Serif } from 'next/font/google';
+/* eslint-enable camelcase */
+import { Navbar, Footer, CommandPalette } from '@/components';
+import { getAllPosts } from '@/lib/blog';
+import { JsonLd } from '@/components/seo/JsonLd';
+import {
+  email,
+  githubUrl,
+  linkedinUrl,
+  siteDescription,
+  siteName,
+  siteTitle,
+  siteUrl
+} from '@/data';
 import './globals.css';
 
 const spaceGrotesk = Space_Grotesk({
@@ -24,46 +38,117 @@ const dmSans = DM_Sans({
   display: 'swap'
 });
 
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: '400',
+  style: 'italic',
+  variable: '--instrument-serif',
+  display: 'swap'
+});
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#070b14' },
+    { media: '(prefers-color-scheme: light)', color: '#f3efe6' }
+  ],
+  colorScheme: 'dark light'
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://isaacayodele.netlify.app'),
-  title: 'Isaac Ayodele | Senior Software Engineer',
-  description:
-    'Senior Software Engineer with 5+ years building production systems across web and mobile. Full-stack expertise in React, Node.js, TypeScript, and React Native.',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${siteName} | ${siteTitle}`,
+    template: `%s — ${siteName}`
+  },
+  description: siteDescription,
   keywords: [
+    'Full-Stack Engineer',
+    'AI Agents',
     'Software Engineer',
-    'Full Stack Developer',
     'React',
     'Next.js',
     'TypeScript',
     'Node.js',
-    'React Native',
-    'Lagos'
+    'NestJS',
+    'PostgreSQL',
+    'Redis',
+    'OpenAI',
+    'RAG',
+    'MCP',
+    'Remote'
   ],
-  authors: [{ name: 'Isaac Ayodele' }],
+  authors: [{ name: siteName }],
   openGraph: {
-    title: 'Isaac Ayodele | Senior Software Engineer',
-    description:
-      'Senior Software Engineer with 5+ years building production systems across web and mobile.',
+    title: `${siteName} | ${siteTitle}`,
+    description: siteDescription,
     type: 'website',
-    url: 'https://isaacayodele.netlify.app',
-    siteName: 'Isaac Ayodele'
+    url: siteUrl,
+    siteName
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Isaac Ayodele | Senior Software Engineer',
-    description:
-      'Senior Software Engineer with 5+ years building production systems across web and mobile.'
-  }
+    title: `${siteName} | ${siteTitle}`,
+    description: siteDescription
+  },
+  alternates: { types: { 'application/rss+xml': '/rss.xml' } },
+  robots: { index: true, follow: true }
 };
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => (
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: siteName,
+    jobTitle: 'Full-Stack Software Engineer',
+    url: siteUrl,
+    email,
+    address: { '@type': 'PostalAddress', addressCountry: 'NG' },
+    knowsAbout: [
+      'Full-stack web development',
+      'AI agents',
+      'OpenAI tool calling',
+      'Retrieval-augmented generation',
+      'React',
+      'Next.js',
+      'Node.js',
+      'NestJS',
+      'PostgreSQL',
+      'Redis'
+    ],
+    sameAs: [linkedinUrl, githubUrl]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteName,
+    url: siteUrl
+  }
+];
+
+const themeScript =
+  "try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}";
+
+const RootLayout = ({ children }: { children: ReactNode }) => (
   <html
     lang="en"
-    className={`${spaceGrotesk.variable} ${spaceMono.variable} ${dmSans.variable}`}
+    className={`${spaceGrotesk.variable} ${spaceMono.variable} ${dmSans.variable} ${instrumentSerif.variable}`}
+    suppressHydrationWarning
   >
+    <head>
+      {/* Applies a saved theme before first paint to avoid a flash. */}
+      {/* eslint-disable-next-line react/no-danger -- static constant string */}
+      <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+    </head>
     <body>
+      {jsonLd.map((data) => (
+        <JsonLd key={data['@type']} data={data} />
+      ))}
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
       <Navbar />
-      {children}
+      <CommandPalette posts={getAllPosts()} />
+      <main id="main">{children}</main>
       <Footer />
     </body>
   </html>
