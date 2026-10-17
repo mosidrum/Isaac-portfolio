@@ -3,6 +3,7 @@ import type { Project } from './types';
 import auxhrImage from '../assets/images/work/auxhr.png';
 import auxhrSiteImage from '../assets/images/work/auxhr-site.png';
 import auxhrLogo from '../assets/images/auxhr-logo.png';
+import relaystackLogo from '../assets/images/relaystack-logo.png';
 import lampstandImage from '../assets/images/work/lampstand.png';
 import relaystackImage from '../assets/images/work/relaystack.png';
 
@@ -62,6 +63,7 @@ export const projects: Project[] = [
       'Helped ship operator experiences for social growth, lead generation, and career workflows, with Social Growth Manager live in public beta.',
     techStack: ['TypeScript', 'Node.js', 'React', 'Redis', 'PostgreSQL', 'OpenAI API', 'Zod'],
     liveUrl: 'https://relaystack.io',
+    logo: relaystackLogo,
     featured: true,
     role: 'Full-Stack Engineer',
     timeline: 'Jan 2026 – Aug 2026',

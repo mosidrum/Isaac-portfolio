@@ -4,6 +4,7 @@ import lampstandLogo from '../assets/images/lampstand-logo.png';
 import salesplatLogo from '../assets/images/salesplat.jpeg';
 import euaLogo from '../assets/images/eua.jpeg';
 import sageGreyLogo from '../assets/images/sage-grey-logo.png';
+import relaystackLogo from '../assets/images/relaystack-logo.png';
 
 export const experiences: Experience[] = [
   {
@@ -20,6 +21,7 @@ export const experiences: Experience[] = [
   },
   {
     company: 'Relaystack',
+    logo: relaystackLogo,
     role: 'Full-Stack Engineer',
     period: 'Jan 2026 – Aug 2026',
     url: 'https://relaystack.io',
