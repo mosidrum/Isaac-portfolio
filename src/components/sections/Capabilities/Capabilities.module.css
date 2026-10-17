@@ -5,83 +5,63 @@
 .inner {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: clamp(60px, 8vh, 100px) var(--pad-x);
-}
-
-.sectionLabel {
-  font-family: var(--font-mono), monospace;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 2.5rem;
+  padding: var(--section-gap) var(--pad-x);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
 }
 
 .cell {
-  padding: 2rem 2rem 2.25rem;
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  background: var(--surface);
+  padding: 1.4rem 1.5rem 1.6rem;
 }
 
-.cell:nth-child(2n) {
-  border-right: none;
-}
-
-.cell:nth-child(3),
-.cell:nth-child(4) {
-  border-bottom: none;
+.index {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--signal);
+  margin-bottom: 0.4rem;
 }
 
 .area {
-  font-family: var(--font-heading), monospace;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text);
-  letter-spacing: -0.01em;
   margin-bottom: 1rem;
 }
 
-.items {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.chips {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 0.45rem;
+  list-style: none;
 }
 
-.item {
-  font-family: var(--font-body), sans-serif;
-  font-size: 0.88rem;
-  line-height: 1.5;
+.chip {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.76rem;
   color: var(--muted);
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
+  padding: 0.28rem 0.6rem;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-@media (max-width: 640px) {
+.chip:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+@media (min-width: 760px) {
   .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cell {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .cell:nth-child(3) {
-    border-bottom: 1px solid var(--border);
-  }
-
-  .cell:last-child {
-    border-bottom: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
